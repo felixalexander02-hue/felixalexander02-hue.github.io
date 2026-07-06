@@ -191,20 +191,6 @@
 
     <svg width="240" height="240" viewBox="0 0 360 340">
         <defs>
-            <!-- Stone colours — warm off-white/cream -->
-            <linearGradient id="h-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f0ece4"/>
-                <stop offset="50%" stop-color="#e8e2d6"/>
-                <stop offset="100%" stop-color="#ddd6c8"/>
-            </linearGradient>
-            <linearGradient id="h-stone-l" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#ede8de"/>
-                <stop offset="100%" stop-color="#e0d9cc"/>
-            </linearGradient>
-            <linearGradient id="h-stone-r" x1="100%" y1="0%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#e5dfd3"/>
-                <stop offset="100%" stop-color="#d8d0c2"/>
-            </linearGradient>
             <!-- Gold keystone gradient -->
             <linearGradient id="h-gold" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#fde68a"/>
@@ -212,131 +198,112 @@
                 <stop offset="70%" stop-color="#f59e0b"/>
                 <stop offset="100%" stop-color="#d97706"/>
             </linearGradient>
-            <!-- Column shadow -->
+            <!-- Column shading -->
             <linearGradient id="h-col-shade" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#d5cdbf"/>
-                <stop offset="50%" stop-color="#e8e2d6"/>
+                <stop offset="30%" stop-color="#e8e2d6"/>
+                <stop offset="70%" stop-color="#ede8de"/>
                 <stop offset="100%" stop-color="#d5cdbf"/>
             </linearGradient>
             <filter id="h-glow">
-                <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#fbbf24" flood-opacity="0.3"/>
+                <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#fbbf24" flood-opacity="0.35"/>
             </filter>
             <filter id="h-shd">
                 <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
             </filter>
+            <!-- Clip arch to viewBox -->
+            <clipPath id="h-arch-clip">
+                <rect x="0" y="0" width="360" height="340"/>
+            </clipPath>
         </defs>
 
-        <!-- ====== LEFT COLUMN — Classical Doric ====== -->
+        <!-- ====== LEFT COLUMN — Short Doric (base y=310, capital top y=230) ====== -->
         <!-- Column base plinth -->
-        <rect x="22" y="268" width="62" height="8" rx="1" fill="#ddd6c8" filter="url(#h-shd)"/>
-        <rect x="26" y="260" width="54" height="10" rx="1" fill="#e5dfd3"/>
-        <line x1="26" y1="261" x2="80" y2="261" stroke="#f0ece4" stroke-width="0.6" stroke-opacity="0.7"/>
+        <rect x="30" y="304" width="56" height="6" rx="1" fill="#ddd6c8" filter="url(#h-shd)"/>
+        <rect x="33" y="296" width="50" height="10" rx="1" fill="#e5dfd3"/>
+        <line x1="33" y1="297" x2="83" y2="297" stroke="#f0ece4" stroke-width="0.6" stroke-opacity="0.7"/>
 
-        <!-- Column shaft — tapered (wider at bottom: 42px, top: 36px) -->
-        <polygon points="32,260 74,260 71,148 35,148" fill="url(#h-col-shade)"/>
+        <!-- Column shaft — tapered (wider at bottom: 40px, top: 34px) -->
+        <polygon points="38,296 78,296 75,240 41,240" fill="url(#h-col-shade)"/>
         <!-- Fluting lines -->
-        <line x1="42" y1="256" x2="44" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="50" y1="256" x2="51" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="58" y1="256" x2="58" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="66" y1="256" x2="64" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
+        <line x1="47" y1="292" x2="49" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="54" y1="292" x2="55" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="61" y1="292" x2="61" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="68" y1="292" x2="67" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
         <!-- Shaft highlight -->
-        <line x1="46" y1="256" x2="48" y2="152" stroke="#f5f0e8" stroke-width="0.5" stroke-opacity="0.3"/>
-
-        <!-- Column capital — wider block with moulding -->
-        <rect x="28" y="142" width="50" height="8" rx="1" fill="#e8e2d6"/>
-        <rect x="24" y="136" width="58" height="8" rx="1.5" fill="#ede8de"/>
-        <line x1="25" y1="137" x2="81" y2="137" stroke="#f5f0e8" stroke-width="0.6" stroke-opacity="0.6"/>
-        <!-- Echinus (curved moulding suggestion) -->
-        <rect x="26" y="140" width="54" height="4" rx="1" fill="#e2dbcd"/>
-
-        <!-- ====== RIGHT COLUMN — Classical Doric ====== -->
-        <!-- Column base plinth -->
-        <rect x="276" y="268" width="62" height="8" rx="1" fill="#d8d0c2" filter="url(#h-shd)"/>
-        <rect x="280" y="260" width="54" height="10" rx="1" fill="#ddd6c8"/>
-        <line x1="280" y1="261" x2="334" y2="261" stroke="#e8e2d6" stroke-width="0.6" stroke-opacity="0.6"/>
-
-        <!-- Column shaft — tapered -->
-        <polygon points="286,260 328,260 325,148 289,148" fill="url(#h-col-shade)"/>
-        <!-- Fluting lines -->
-        <line x1="296" y1="256" x2="298" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="304" y1="256" x2="305" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="312" y1="256" x2="312" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <line x1="320" y1="256" x2="318" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-        <!-- Shaft highlight -->
-        <line x1="300" y1="256" x2="302" y2="152" stroke="#f5f0e8" stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="51" y1="292" x2="52" y2="244" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
 
         <!-- Column capital -->
-        <rect x="282" y="142" width="50" height="8" rx="1" fill="#e0d9cc"/>
-        <rect x="278" y="136" width="58" height="8" rx="1.5" fill="#e5dfd3"/>
-        <line x1="279" y1="137" x2="335" y2="137" stroke="#ede8de" stroke-width="0.6" stroke-opacity="0.5"/>
-        <rect x="280" y="140" width="54" height="4" rx="1" fill="#d8d1c3"/>
+        <rect x="35" y="236" width="46" height="6" rx="1" fill="#e8e2d6"/>
+        <rect x="31" y="230" width="54" height="8" rx="1.5" fill="#ede8de"/>
+        <line x1="32" y1="231" x2="84" y2="231" stroke="#f5f0e8" stroke-width="0.6" stroke-opacity="0.6"/>
+        <rect x="33" y="234" width="50" height="4" rx="1" fill="#e2dbcd"/>
+
+        <!-- ====== RIGHT COLUMN — Short Doric ====== -->
+        <!-- Column base plinth -->
+        <rect x="274" y="304" width="56" height="6" rx="1" fill="#d8d0c2" filter="url(#h-shd)"/>
+        <rect x="277" y="296" width="50" height="10" rx="1" fill="#ddd6c8"/>
+        <line x1="277" y1="297" x2="327" y2="297" stroke="#e8e2d6" stroke-width="0.6" stroke-opacity="0.6"/>
+
+        <!-- Column shaft — tapered -->
+        <polygon points="282,296 322,296 319,240 285,240" fill="url(#h-col-shade)"/>
+        <!-- Fluting lines -->
+        <line x1="291" y1="292" x2="293" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="298" y1="292" x2="299" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="305" y1="292" x2="305" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="312" y1="292" x2="311" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+        <!-- Shaft highlight -->
+        <line x1="295" y1="292" x2="296" y2="244" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
+
+        <!-- Column capital -->
+        <rect x="279" y="236" width="46" height="6" rx="1" fill="#e0d9cc"/>
+        <rect x="275" y="230" width="54" height="8" rx="1.5" fill="#e5dfd3"/>
+        <line x1="276" y1="231" x2="328" y2="231" stroke="#ede8de" stroke-width="0.6" stroke-opacity="0.5"/>
+        <rect x="277" y="234" width="50" height="4" rx="1" fill="#d8d1c3"/>
 
         <!-- ====== ENTABLATURE (beam across top of columns) ====== -->
-        <rect x="20" y="128" width="320" height="10" rx="1" fill="#e8e2d6" filter="url(#h-shd)"/>
-        <line x1="20" y1="129" x2="340" y2="129" stroke="#f0ece4" stroke-width="0.8" stroke-opacity="0.5"/>
+        <rect x="28" y="222" width="304" height="10" rx="1" fill="#e8e2d6" filter="url(#h-shd)"/>
+        <line x1="28" y1="223" x2="332" y2="223" stroke="#f0ece4" stroke-width="0.8" stroke-opacity="0.5"/>
 
-        <!-- ====== ARCH with voussoir blocks ====== -->
-        <!-- Outer arch path -->
-        <path d="M20 130 L20 80 Q20 4 180 4 Q340 4 340 80 L340 130"
-              fill="none" stroke="url(#h-stone)" stroke-width="56" stroke-linecap="butt"/>
+        <!-- ====== ARCH — Individual voussoir stone blocks ====== -->
+        <!-- cx=180, cy=230, outerR=220, innerR=145 -->
+        <!-- 7 left + 1 keystone (14deg) + 7 right, each regular stone ~11.86deg -->
+        <g clip-path="url(#h-arch-clip)">
+            <!-- Left side voussoirs (from 180 deg down to keystone at 97 deg) -->
+            <path d="M -40.0 230.0 A 220 220 0 0 0 -35.31 184.8 L 38.09 200.21 A 145 145 0 0 1 35.0 230.0 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M -35.31 184.8 A 220 220 0 0 0 -21.42 141.52 L 47.24 171.68 A 145 145 0 0 1 38.09 200.21 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M -21.42 141.52 A 220 220 0 0 0 1.05 102.02 L 62.06 145.65 A 145 145 0 0 1 47.24 171.68 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 1.05 102.02 A 220 220 0 0 0 31.17 67.98 L 81.91 123.22 A 145 145 0 0 1 62.06 145.65 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 31.17 67.98 A 220 220 0 0 0 67.63 40.86 L 105.94 105.34 A 145 145 0 0 1 81.91 123.22 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 67.63 40.86 A 220 220 0 0 0 108.89 21.81 L 133.13 92.78 A 145 145 0 0 1 105.94 105.34 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 108.89 21.81 A 220 220 0 0 0 153.19 11.64 L 162.33 86.08 A 145 145 0 0 1 133.13 92.78 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
 
-        <!-- Inner cutout — creates the opening -->
-        <path d="M78 280 L78 110 Q78 50 180 50 Q282 50 282 110 L282 280"
-              fill="#08090c"/>
+            <!-- KEYSTONE — golden crown jewel (97 deg to 83 deg, centered on 90) -->
+            <path d="M 153.19 11.64 A 220 220 0 0 0 206.81 11.64 L 197.67 86.08 A 145 145 0 0 1 162.33 86.08 Z" fill="url(#h-gold)" stroke="#b8860b" stroke-width="1" filter="url(#h-glow)"/>
+            <!-- Keystone bevel highlights -->
+            <line x1="158" y1="20" x2="202" y2="20" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+            <line x1="159" y1="30" x2="201" y2="30" stroke="white" stroke-opacity="0.15" stroke-width="0.5"/>
+            <line x1="160" y1="40" x2="200" y2="40" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
+            <line x1="163" y1="82" x2="197" y2="82" stroke="#b8860b" stroke-opacity="0.4" stroke-width="0.8"/>
 
-        <!-- ====== VOUSSOIR SEPARATION LINES — proper wedge-shaped stones ====== -->
-        <!-- Left side voussoirs, radiating from keystone outward -->
-        <!-- These lines go from outer edge to inner edge of the arch -->
+            <!-- Right side voussoirs (from keystone at 83 deg down to 0 deg) -->
+            <path d="M 206.81 11.64 A 220 220 0 0 0 251.11 21.81 L 226.87 92.78 A 145 145 0 0 1 197.67 86.08 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 251.11 21.81 A 220 220 0 0 0 292.37 40.86 L 254.06 105.34 A 145 145 0 0 1 226.87 92.78 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 292.37 40.86 A 220 220 0 0 0 328.83 67.98 L 278.09 123.22 A 145 145 0 0 1 254.06 105.34 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 328.83 67.98 A 220 220 0 0 0 358.95 102.02 L 297.94 145.65 A 145 145 0 0 1 278.09 123.22 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 358.95 102.02 A 220 220 0 0 0 381.42 141.52 L 312.76 171.68 A 145 145 0 0 1 297.94 145.65 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 381.42 141.52 A 220 220 0 0 0 395.31 184.8 L 321.91 200.21 A 145 145 0 0 1 312.76 171.68 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+            <path d="M 395.31 184.8 A 220 220 0 0 0 400.0 230.0 L 325.0 230.0 A 145 145 0 0 1 321.91 200.21 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+        </g>
 
-        <!-- L1 — closest to keystone -->
-        <line x1="140" y1="6" x2="118" y2="52" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L2 -->
-        <line x1="118" y1="10" x2="102" y2="54" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L3 -->
-        <line x1="96" y1="18" x2="88" y2="58" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L4 -->
-        <line x1="76" y1="30" x2="78" y2="66" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L5 -->
-        <line x1="58" y1="46" x2="70" y2="78" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L6 -->
-        <line x1="44" y1="62" x2="66" y2="90" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L7 -->
-        <line x1="34" y1="80" x2="64" y2="102" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- L8 — near the spring/column -->
-        <line x1="26" y1="100" x2="66" y2="114" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-
-        <!-- Right side voussoirs, radiating from keystone outward -->
-        <!-- R1 — closest to keystone -->
-        <line x1="220" y1="6" x2="242" y2="52" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R2 -->
-        <line x1="242" y1="10" x2="258" y2="54" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R3 -->
-        <line x1="264" y1="18" x2="272" y2="58" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R4 -->
-        <line x1="284" y1="30" x2="282" y2="66" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R5 -->
-        <line x1="302" y1="46" x2="290" y2="78" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R6 -->
-        <line x1="316" y1="62" x2="294" y2="90" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R7 -->
-        <line x1="326" y1="80" x2="296" y2="102" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-        <!-- R8 — near the spring/column -->
-        <line x1="334" y1="100" x2="294" y2="114" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-
-        <!-- ====== KEYSTONE — the golden crown jewel ====== -->
-        <path d="M155 0 L205 0 L200 50 L160 50 Z" fill="url(#h-gold)" filter="url(#h-glow)"/>
-        <!-- Keystone bevel lines -->
-        <line x1="162" y1="8" x2="198" y2="8" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
-        <line x1="163" y1="16" x2="197" y2="16" stroke="white" stroke-opacity="0.15" stroke-width="0.5"/>
-        <line x1="164" y1="24" x2="196" y2="24" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
-        <!-- Keystone bottom accent -->
-        <line x1="161" y1="48" x2="199" y2="48" stroke="#b8860b" stroke-opacity="0.4" stroke-width="0.8"/>
+        <!-- Inner arch opening — cut out the center -->
+        <path d="M 35 340 L 35 230 A 145 145 0 0 1 325 230 L 325 340 Z" fill="#08090c"/>
 
         <!-- Outer arch highlight -->
-        <path d="M45 80 Q45 14 180 14 Q315 14 315 80" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+        <path d="M 50 230 A 210 210 0 0 1 310 230" fill="none" stroke="white" stroke-opacity="0.04" stroke-width="1" transform="translate(0,-2)"/>
 
         <!-- Base line -->
-        <rect x="16" y="274" width="328" height="3" rx="1" fill="#d8d0c2" opacity="0.4"/>
+        <rect x="24" y="310" width="312" height="3" rx="1" fill="#d8d0c2" opacity="0.4"/>
     </svg>
 
     <div class="wm">KEYSTONE</div>
@@ -511,11 +478,6 @@
 <!-- ============================================ -->
 <symbol id="monument-dk" viewBox="0 0 360 340">
     <defs>
-        <linearGradient id="sdk-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f0ece4"/>
-            <stop offset="50%" stop-color="#e8e2d6"/>
-            <stop offset="100%" stop-color="#ddd6c8"/>
-        </linearGradient>
         <linearGradient id="sdk-gold" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#fde68a"/>
             <stop offset="30%" stop-color="#fbbf24"/>
@@ -529,81 +491,86 @@
             <stop offset="100%" stop-color="#d5cdbf"/>
         </linearGradient>
         <filter id="sdk-glow">
-            <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#fbbf24" flood-opacity="0.3"/>
+            <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#fbbf24" flood-opacity="0.35"/>
         </filter>
         <filter id="sdk-shd">
             <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.12"/>
         </filter>
+        <clipPath id="sdk-arch-clip">
+            <rect x="0" y="0" width="360" height="340"/>
+        </clipPath>
     </defs>
 
-    <!-- LEFT COLUMN -->
-    <rect x="22" y="268" width="62" height="8" rx="1" fill="#ddd6c8" filter="url(#sdk-shd)"/>
-    <rect x="26" y="260" width="54" height="10" rx="1" fill="#e5dfd3"/>
-    <line x1="26" y1="261" x2="80" y2="261" stroke="#f0ece4" stroke-width="0.6" stroke-opacity="0.7"/>
-    <polygon points="32,260 74,260 71,148 35,148" fill="url(#sdk-col)"/>
-    <line x1="42" y1="256" x2="44" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="50" y1="256" x2="51" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="58" y1="256" x2="58" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="66" y1="256" x2="64" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="46" y1="256" x2="48" y2="152" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
-    <rect x="28" y="142" width="50" height="8" rx="1" fill="#e8e2d6"/>
-    <rect x="24" y="136" width="58" height="8" rx="1.5" fill="#ede8de"/>
-    <line x1="25" y1="137" x2="81" y2="137" stroke="#f5f0e8" stroke-width="0.6" stroke-opacity="0.6"/>
-    <rect x="26" y="140" width="54" height="4" rx="1" fill="#e2dbcd"/>
+    <!-- LEFT COLUMN — Short Doric -->
+    <rect x="30" y="304" width="56" height="6" rx="1" fill="#ddd6c8" filter="url(#sdk-shd)"/>
+    <rect x="33" y="296" width="50" height="10" rx="1" fill="#e5dfd3"/>
+    <line x1="33" y1="297" x2="83" y2="297" stroke="#f0ece4" stroke-width="0.6" stroke-opacity="0.7"/>
+    <polygon points="38,296 78,296 75,240 41,240" fill="url(#sdk-col)"/>
+    <line x1="47" y1="292" x2="49" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="54" y1="292" x2="55" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="61" y1="292" x2="61" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="68" y1="292" x2="67" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="51" y1="292" x2="52" y2="244" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
+    <rect x="35" y="236" width="46" height="6" rx="1" fill="#e8e2d6"/>
+    <rect x="31" y="230" width="54" height="8" rx="1.5" fill="#ede8de"/>
+    <line x1="32" y1="231" x2="84" y2="231" stroke="#f5f0e8" stroke-width="0.6" stroke-opacity="0.6"/>
+    <rect x="33" y="234" width="50" height="4" rx="1" fill="#e2dbcd"/>
 
-    <!-- RIGHT COLUMN -->
-    <rect x="276" y="268" width="62" height="8" rx="1" fill="#d8d0c2" filter="url(#sdk-shd)"/>
-    <rect x="280" y="260" width="54" height="10" rx="1" fill="#ddd6c8"/>
-    <line x1="280" y1="261" x2="334" y2="261" stroke="#e8e2d6" stroke-width="0.6" stroke-opacity="0.6"/>
-    <polygon points="286,260 328,260 325,148 289,148" fill="url(#sdk-col)"/>
-    <line x1="296" y1="256" x2="298" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="304" y1="256" x2="305" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="312" y1="256" x2="312" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="320" y1="256" x2="318" y2="152" stroke="#ccc5b5" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="300" y1="256" x2="302" y2="152" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
-    <rect x="282" y="142" width="50" height="8" rx="1" fill="#e0d9cc"/>
-    <rect x="278" y="136" width="58" height="8" rx="1.5" fill="#e5dfd3"/>
-    <line x1="279" y1="137" x2="335" y2="137" stroke="#ede8de" stroke-width="0.6" stroke-opacity="0.5"/>
-    <rect x="280" y="140" width="54" height="4" rx="1" fill="#d8d1c3"/>
+    <!-- RIGHT COLUMN — Short Doric -->
+    <rect x="274" y="304" width="56" height="6" rx="1" fill="#d8d0c2" filter="url(#sdk-shd)"/>
+    <rect x="277" y="296" width="50" height="10" rx="1" fill="#ddd6c8"/>
+    <line x1="277" y1="297" x2="327" y2="297" stroke="#e8e2d6" stroke-width="0.6" stroke-opacity="0.6"/>
+    <polygon points="282,296 322,296 319,240 285,240" fill="url(#sdk-col)"/>
+    <line x1="291" y1="292" x2="293" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="298" y1="292" x2="299" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="305" y1="292" x2="305" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="312" y1="292" x2="311" y2="244" stroke="#ccc5b5" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="295" y1="292" x2="296" y2="244" stroke="#f5f0e8" stroke-width="0.4" stroke-opacity="0.3"/>
+    <rect x="279" y="236" width="46" height="6" rx="1" fill="#e0d9cc"/>
+    <rect x="275" y="230" width="54" height="8" rx="1.5" fill="#e5dfd3"/>
+    <line x1="276" y1="231" x2="328" y2="231" stroke="#ede8de" stroke-width="0.6" stroke-opacity="0.5"/>
+    <rect x="277" y="234" width="50" height="4" rx="1" fill="#d8d1c3"/>
 
     <!-- ENTABLATURE -->
-    <rect x="20" y="128" width="320" height="10" rx="1" fill="#e8e2d6" filter="url(#sdk-shd)"/>
-    <line x1="20" y1="129" x2="340" y2="129" stroke="#f0ece4" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="28" y="222" width="304" height="10" rx="1" fill="#e8e2d6" filter="url(#sdk-shd)"/>
+    <line x1="28" y1="223" x2="332" y2="223" stroke="#f0ece4" stroke-width="0.8" stroke-opacity="0.5"/>
 
-    <!-- ARCH -->
-    <path d="M20 130 L20 80 Q20 4 180 4 Q340 4 340 80 L340 130"
-          fill="none" stroke="url(#sdk-stone)" stroke-width="56" stroke-linecap="butt"/>
-    <path d="M78 280 L78 110 Q78 50 180 50 Q282 50 282 110 L282 280"
-          fill="#08090c"/>
+    <!-- ARCH — Individual voussoir stone blocks -->
+    <g clip-path="url(#sdk-arch-clip)">
+        <!-- Left side voussoirs -->
+        <path d="M -40.0 230.0 A 220 220 0 0 0 -35.31 184.8 L 38.09 200.21 A 145 145 0 0 1 35.0 230.0 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M -35.31 184.8 A 220 220 0 0 0 -21.42 141.52 L 47.24 171.68 A 145 145 0 0 1 38.09 200.21 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M -21.42 141.52 A 220 220 0 0 0 1.05 102.02 L 62.06 145.65 A 145 145 0 0 1 47.24 171.68 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 1.05 102.02 A 220 220 0 0 0 31.17 67.98 L 81.91 123.22 A 145 145 0 0 1 62.06 145.65 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 31.17 67.98 A 220 220 0 0 0 67.63 40.86 L 105.94 105.34 A 145 145 0 0 1 81.91 123.22 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 67.63 40.86 A 220 220 0 0 0 108.89 21.81 L 133.13 92.78 A 145 145 0 0 1 105.94 105.34 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 108.89 21.81 A 220 220 0 0 0 153.19 11.64 L 162.33 86.08 A 145 145 0 0 1 133.13 92.78 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
 
-    <!-- VOUSSOIRS LEFT -->
-    <line x1="140" y1="6" x2="118" y2="52" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="118" y1="10" x2="102" y2="54" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="96" y1="18" x2="88" y2="58" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="76" y1="30" x2="78" y2="66" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="58" y1="46" x2="70" y2="78" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="44" y1="62" x2="66" y2="90" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="34" y1="80" x2="64" y2="102" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="26" y1="100" x2="66" y2="114" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <!-- VOUSSOIRS RIGHT -->
-    <line x1="220" y1="6" x2="242" y2="52" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="242" y1="10" x2="258" y2="54" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="264" y1="18" x2="272" y2="58" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="284" y1="30" x2="282" y2="66" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="302" y1="46" x2="290" y2="78" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="316" y1="62" x2="294" y2="90" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="326" y1="80" x2="296" y2="102" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
-    <line x1="334" y1="100" x2="294" y2="114" stroke="#08090c" stroke-width="2" stroke-opacity="0.6"/>
+        <!-- KEYSTONE — golden crown -->
+        <path d="M 153.19 11.64 A 220 220 0 0 0 206.81 11.64 L 197.67 86.08 A 145 145 0 0 1 162.33 86.08 Z" fill="url(#sdk-gold)" stroke="#b8860b" stroke-width="1" filter="url(#sdk-glow)"/>
+        <line x1="158" y1="20" x2="202" y2="20" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+        <line x1="159" y1="30" x2="201" y2="30" stroke="white" stroke-opacity="0.15" stroke-width="0.5"/>
+        <line x1="160" y1="40" x2="200" y2="40" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
+        <line x1="163" y1="82" x2="197" y2="82" stroke="#b8860b" stroke-opacity="0.4" stroke-width="0.8"/>
 
-    <!-- KEYSTONE -->
-    <path d="M155 0 L205 0 L200 50 L160 50 Z" fill="url(#sdk-gold)" filter="url(#sdk-glow)"/>
-    <line x1="162" y1="8" x2="198" y2="8" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
-    <line x1="163" y1="16" x2="197" y2="16" stroke="white" stroke-opacity="0.15" stroke-width="0.5"/>
-    <line x1="164" y1="24" x2="196" y2="24" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
-    <line x1="161" y1="48" x2="199" y2="48" stroke="#b8860b" stroke-opacity="0.4" stroke-width="0.8"/>
+        <!-- Right side voussoirs -->
+        <path d="M 206.81 11.64 A 220 220 0 0 0 251.11 21.81 L 226.87 92.78 A 145 145 0 0 1 197.67 86.08 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 251.11 21.81 A 220 220 0 0 0 292.37 40.86 L 254.06 105.34 A 145 145 0 0 1 226.87 92.78 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 292.37 40.86 A 220 220 0 0 0 328.83 67.98 L 278.09 123.22 A 145 145 0 0 1 254.06 105.34 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 328.83 67.98 A 220 220 0 0 0 358.95 102.02 L 297.94 145.65 A 145 145 0 0 1 278.09 123.22 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 358.95 102.02 A 220 220 0 0 0 381.42 141.52 L 312.76 171.68 A 145 145 0 0 1 297.94 145.65 Z" fill="#e8e2d6" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 381.42 141.52 A 220 220 0 0 0 395.31 184.8 L 321.91 200.21 A 145 145 0 0 1 312.76 171.68 Z" fill="#ebe5d9" stroke="#08090c" stroke-width="1.5"/>
+        <path d="M 395.31 184.8 A 220 220 0 0 0 400.0 230.0 L 325.0 230.0 A 145 145 0 0 1 321.91 200.21 Z" fill="#f0ece4" stroke="#08090c" stroke-width="1.5"/>
+    </g>
 
-    <path d="M45 80 Q45 14 180 14 Q315 14 315 80" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
-    <rect x="16" y="274" width="328" height="3" rx="1" fill="#d8d0c2" opacity="0.4"/>
+    <!-- Inner arch opening -->
+    <path d="M 35 340 L 35 230 A 145 145 0 0 1 325 230 L 325 340 Z" fill="#08090c"/>
+
+    <!-- Outer arch highlight -->
+    <path d="M 50 230 A 210 210 0 0 1 310 230" fill="none" stroke="white" stroke-opacity="0.04" stroke-width="1" transform="translate(0,-2)"/>
+
+    <!-- Base line -->
+    <rect x="24" y="310" width="312" height="3" rx="1" fill="#d8d0c2" opacity="0.4"/>
 </symbol>
 
 <!-- ============================================ -->
@@ -611,11 +578,6 @@
 <!-- ============================================ -->
 <symbol id="monument-lt" viewBox="0 0 360 340">
     <defs>
-        <linearGradient id="slt-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#d8d0c2"/>
-            <stop offset="50%" stop-color="#ccc4b4"/>
-            <stop offset="100%" stop-color="#bfb6a4"/>
-        </linearGradient>
         <linearGradient id="slt-gold" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#d97706"/>
             <stop offset="30%" stop-color="#b45309"/>
@@ -628,69 +590,72 @@
             <stop offset="70%" stop-color="#d2cab8"/>
             <stop offset="100%" stop-color="#b8b0a0"/>
         </linearGradient>
+        <clipPath id="slt-arch-clip">
+            <rect x="0" y="0" width="360" height="340"/>
+        </clipPath>
     </defs>
 
-    <!-- LEFT COLUMN -->
-    <rect x="22" y="268" width="62" height="8" rx="1" fill="#bfb6a4"/>
-    <rect x="26" y="260" width="54" height="10" rx="1" fill="#c8c0ae"/>
-    <line x1="26" y1="261" x2="80" y2="261" stroke="#d2cab8" stroke-width="0.6" stroke-opacity="0.5"/>
-    <polygon points="32,260 74,260 71,148 35,148" fill="url(#slt-col)"/>
-    <line x1="42" y1="256" x2="44" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="50" y1="256" x2="51" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="58" y1="256" x2="58" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="66" y1="256" x2="64" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <rect x="28" y="142" width="50" height="8" rx="1" fill="#ccc4b4"/>
-    <rect x="24" y="136" width="58" height="8" rx="1.5" fill="#d2cab8"/>
-    <rect x="26" y="140" width="54" height="4" rx="1" fill="#c2baaa"/>
+    <!-- LEFT COLUMN — Short Doric -->
+    <rect x="30" y="304" width="56" height="6" rx="1" fill="#bfb6a4"/>
+    <rect x="33" y="296" width="50" height="10" rx="1" fill="#c8c0ae"/>
+    <line x1="33" y1="297" x2="83" y2="297" stroke="#d2cab8" stroke-width="0.6" stroke-opacity="0.5"/>
+    <polygon points="38,296 78,296 75,240 41,240" fill="url(#slt-col)"/>
+    <line x1="47" y1="292" x2="49" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="54" y1="292" x2="55" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="61" y1="292" x2="61" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="68" y1="292" x2="67" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <rect x="35" y="236" width="46" height="6" rx="1" fill="#ccc4b4"/>
+    <rect x="31" y="230" width="54" height="8" rx="1.5" fill="#d2cab8"/>
+    <rect x="33" y="234" width="50" height="4" rx="1" fill="#c2baaa"/>
 
-    <!-- RIGHT COLUMN -->
-    <rect x="276" y="268" width="62" height="8" rx="1" fill="#b5ad9c"/>
-    <rect x="280" y="260" width="54" height="10" rx="1" fill="#bfb6a4"/>
-    <polygon points="286,260 328,260 325,148 289,148" fill="url(#slt-col)"/>
-    <line x1="296" y1="256" x2="298" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="304" y1="256" x2="305" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="312" y1="256" x2="312" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <line x1="320" y1="256" x2="318" y2="152" stroke="#a8a090" stroke-width="0.8" stroke-opacity="0.5"/>
-    <rect x="282" y="142" width="50" height="8" rx="1" fill="#c2baaa"/>
-    <rect x="278" y="136" width="58" height="8" rx="1.5" fill="#c8c0ae"/>
-    <rect x="280" y="140" width="54" height="4" rx="1" fill="#b8b0a0"/>
+    <!-- RIGHT COLUMN — Short Doric -->
+    <rect x="274" y="304" width="56" height="6" rx="1" fill="#b5ad9c"/>
+    <rect x="277" y="296" width="50" height="10" rx="1" fill="#bfb6a4"/>
+    <polygon points="282,296 322,296 319,240 285,240" fill="url(#slt-col)"/>
+    <line x1="291" y1="292" x2="293" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="298" y1="292" x2="299" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="305" y1="292" x2="305" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <line x1="312" y1="292" x2="311" y2="244" stroke="#a8a090" stroke-width="0.7" stroke-opacity="0.5"/>
+    <rect x="279" y="236" width="46" height="6" rx="1" fill="#c2baaa"/>
+    <rect x="275" y="230" width="54" height="8" rx="1.5" fill="#c8c0ae"/>
+    <rect x="277" y="234" width="50" height="4" rx="1" fill="#b8b0a0"/>
 
     <!-- ENTABLATURE -->
-    <rect x="20" y="128" width="320" height="10" rx="1" fill="#ccc4b4"/>
-    <line x1="20" y1="129" x2="340" y2="129" stroke="#d8d0c2" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="28" y="222" width="304" height="10" rx="1" fill="#ccc4b4"/>
+    <line x1="28" y1="223" x2="332" y2="223" stroke="#d8d0c2" stroke-width="0.8" stroke-opacity="0.5"/>
 
-    <!-- ARCH -->
-    <path d="M20 130 L20 80 Q20 4 180 4 Q340 4 340 80 L340 130"
-          fill="none" stroke="url(#slt-stone)" stroke-width="56" stroke-linecap="butt"/>
-    <path d="M78 280 L78 110 Q78 50 180 50 Q282 50 282 110 L282 280"
-          fill="#f4f5f7"/>
+    <!-- ARCH — Individual voussoir stone blocks -->
+    <g clip-path="url(#slt-arch-clip)">
+        <!-- Left side voussoirs -->
+        <path d="M -40.0 230.0 A 220 220 0 0 0 -35.31 184.8 L 38.09 200.21 A 145 145 0 0 1 35.0 230.0 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M -35.31 184.8 A 220 220 0 0 0 -21.42 141.52 L 47.24 171.68 A 145 145 0 0 1 38.09 200.21 Z" fill="#ccc4b4" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M -21.42 141.52 A 220 220 0 0 0 1.05 102.02 L 62.06 145.65 A 145 145 0 0 1 47.24 171.68 Z" fill="#c8c0ae" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 1.05 102.02 A 220 220 0 0 0 31.17 67.98 L 81.91 123.22 A 145 145 0 0 1 62.06 145.65 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 31.17 67.98 A 220 220 0 0 0 67.63 40.86 L 105.94 105.34 A 145 145 0 0 1 81.91 123.22 Z" fill="#ccc4b4" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 67.63 40.86 A 220 220 0 0 0 108.89 21.81 L 133.13 92.78 A 145 145 0 0 1 105.94 105.34 Z" fill="#c8c0ae" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 108.89 21.81 A 220 220 0 0 0 153.19 11.64 L 162.33 86.08 A 145 145 0 0 1 133.13 92.78 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
 
-    <!-- VOUSSOIRS LEFT -->
-    <line x1="140" y1="6" x2="118" y2="52" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="118" y1="10" x2="102" y2="54" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="96" y1="18" x2="88" y2="58" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="76" y1="30" x2="78" y2="66" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="58" y1="46" x2="70" y2="78" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="44" y1="62" x2="66" y2="90" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="34" y1="80" x2="64" y2="102" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="26" y1="100" x2="66" y2="114" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <!-- VOUSSOIRS RIGHT -->
-    <line x1="220" y1="6" x2="242" y2="52" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="242" y1="10" x2="258" y2="54" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="264" y1="18" x2="272" y2="58" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="284" y1="30" x2="282" y2="66" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="302" y1="46" x2="290" y2="78" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="316" y1="62" x2="294" y2="90" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="326" y1="80" x2="296" y2="102" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
-    <line x1="334" y1="100" x2="294" y2="114" stroke="#f4f5f7" stroke-width="2" stroke-opacity="0.7"/>
+        <!-- KEYSTONE — darker gold for light bg -->
+        <path d="M 153.19 11.64 A 220 220 0 0 0 206.81 11.64 L 197.67 86.08 A 145 145 0 0 1 162.33 86.08 Z" fill="url(#slt-gold)" stroke="#78350f" stroke-width="1"/>
+        <line x1="158" y1="20" x2="202" y2="20" stroke="white" stroke-opacity="0.25" stroke-width="0.8"/>
+        <line x1="159" y1="30" x2="201" y2="30" stroke="white" stroke-opacity="0.1" stroke-width="0.5"/>
+        <line x1="163" y1="82" x2="197" y2="82" stroke="#78350f" stroke-opacity="0.3" stroke-width="0.8"/>
 
-    <!-- KEYSTONE -->
-    <path d="M155 0 L205 0 L200 50 L160 50 Z" fill="url(#slt-gold)"/>
-    <line x1="162" y1="8" x2="198" y2="8" stroke="white" stroke-opacity="0.25" stroke-width="0.8"/>
-    <line x1="163" y1="16" x2="197" y2="16" stroke="white" stroke-opacity="0.1" stroke-width="0.5"/>
-    <line x1="161" y1="48" x2="199" y2="48" stroke="#78350f" stroke-opacity="0.3" stroke-width="0.8"/>
+        <!-- Right side voussoirs -->
+        <path d="M 206.81 11.64 A 220 220 0 0 0 251.11 21.81 L 226.87 92.78 A 145 145 0 0 1 197.67 86.08 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 251.11 21.81 A 220 220 0 0 0 292.37 40.86 L 254.06 105.34 A 145 145 0 0 1 226.87 92.78 Z" fill="#ccc4b4" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 292.37 40.86 A 220 220 0 0 0 328.83 67.98 L 278.09 123.22 A 145 145 0 0 1 254.06 105.34 Z" fill="#c8c0ae" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 328.83 67.98 A 220 220 0 0 0 358.95 102.02 L 297.94 145.65 A 145 145 0 0 1 278.09 123.22 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 358.95 102.02 A 220 220 0 0 0 381.42 141.52 L 312.76 171.68 A 145 145 0 0 1 297.94 145.65 Z" fill="#ccc4b4" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 381.42 141.52 A 220 220 0 0 0 395.31 184.8 L 321.91 200.21 A 145 145 0 0 1 312.76 171.68 Z" fill="#c8c0ae" stroke="#f4f5f7" stroke-width="1.5"/>
+        <path d="M 395.31 184.8 A 220 220 0 0 0 400.0 230.0 L 325.0 230.0 A 145 145 0 0 1 321.91 200.21 Z" fill="#d8d0c2" stroke="#f4f5f7" stroke-width="1.5"/>
+    </g>
 
-    <rect x="16" y="274" width="328" height="3" rx="1" fill="#b5ad9c" opacity="0.4"/>
+    <!-- Inner arch opening -->
+    <path d="M 35 340 L 35 230 A 145 145 0 0 1 325 230 L 325 340 Z" fill="#f4f5f7"/>
+
+    <!-- Base line -->
+    <rect x="24" y="310" width="312" height="3" rx="1" fill="#b5ad9c" opacity="0.4"/>
 </symbol>
 
 </defs>

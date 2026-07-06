@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keystone Logo Concepts v3</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
@@ -166,152 +166,276 @@
 <div class="concepts">
 
 <!-- ══════════════════════════════════════════════════════ -->
-<!-- 1 — THE MONUMENTAL ARCH                              -->
+<!-- 1 — THE MONUMENTAL ARCH (REFINED)                    -->
 <!-- ══════════════════════════════════════════════════════ -->
 <div class="card">
     <div class="card-head">
         <span class="num">01</span>
         <span class="card-name">The Monument</span>
-        <span class="card-desc">Classic Roman arch &mdash; thick stone, golden keystone crown</span>
+        <span class="card-desc">Off-white stone &bull; Roman columns &bull; masonry detail &bull; golden keystone</span>
     </div>
     <div class="row">
         <!-- DARK -->
         <div class="cell bg-dk">
             <span class="tag" style="color:#555">Dark</span>
-            <svg width="130" height="130" viewBox="0 0 300 280">
+            <svg width="150" height="150" viewBox="0 0 320 300">
                 <defs>
-                    <linearGradient id="m1-arch" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#2563eb"/>
-                        <stop offset="50%" stop-color="#1d8abd"/>
-                        <stop offset="100%" stop-color="#1e6fa0"/>
+                    <!-- Off-white stone gradients -->
+                    <linearGradient id="m1-stone" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ede9e0"/>
+                        <stop offset="50%" stop-color="#e0dbd0"/>
+                        <stop offset="100%" stop-color="#d4cfc4"/>
+                    </linearGradient>
+                    <linearGradient id="m1-stone-shade" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#d4cfc4"/>
+                        <stop offset="50%" stop-color="#cac4b8"/>
+                        <stop offset="100%" stop-color="#bfb9ac"/>
                     </linearGradient>
                     <linearGradient id="m1-key" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#fbbf24"/>
-                        <stop offset="50%" stop-color="#f59e0b"/>
+                        <stop offset="0%" stop-color="#fde68a"/>
+                        <stop offset="30%" stop-color="#fbbf24"/>
+                        <stop offset="70%" stop-color="#f59e0b"/>
                         <stop offset="100%" stop-color="#d97706"/>
                     </linearGradient>
-                    <linearGradient id="m1-pillar-l" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#2563eb"/>
-                        <stop offset="100%" stop-color="#1e40af"/>
-                    </linearGradient>
-                    <linearGradient id="m1-pillar-r" x1="100%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#1e6fa0"/>
-                        <stop offset="100%" stop-color="#164e7e"/>
-                    </linearGradient>
                     <filter id="m1-glow">
-                        <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#fbbf24" flood-opacity="0.25"/>
+                        <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#fbbf24" flood-opacity="0.35"/>
                     </filter>
                     <filter id="m1-shd">
-                        <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1e40af" flood-opacity="0.3"/>
+                        <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
                     </filter>
+                    <!-- Mortar/joint color for dark bg -->
+                    <!-- Using slightly darker than stone for joint lines -->
                 </defs>
 
-                <!-- Left pillar -->
-                <rect x="20" y="130" width="50" height="140" rx="3" fill="url(#m1-pillar-l)" filter="url(#m1-shd)"/>
-                <rect x="22" y="132" width="46" height="136" rx="2" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+                <!-- ===== LEFT COLUMN — Roman numeral "I" style ===== -->
+                <!-- Column shaft (tall, narrower, classical proportions) -->
+                <rect x="28" y="148" width="38" height="120" fill="url(#m1-stone)" filter="url(#m1-shd)"/>
+                <!-- Fluting lines on column shaft -->
+                <line x1="36" y1="150" x2="36" y2="266" stroke="#bfb9ac" stroke-width="0.7" stroke-opacity="0.5"/>
+                <line x1="42" y1="150" x2="42" y2="266" stroke="#bfb9ac" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="48" y1="150" x2="48" y2="266" stroke="#bfb9ac" stroke-width="0.7" stroke-opacity="0.5"/>
+                <line x1="54" y1="150" x2="54" y2="266" stroke="#bfb9ac" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="60" y1="150" x2="60" y2="266" stroke="#bfb9ac" stroke-width="0.7" stroke-opacity="0.5"/>
+                <!-- Capital (top serif/bracket) — wider than shaft -->
+                <rect x="18" y="136" width="58" height="6" rx="1" fill="#ede9e0"/>
+                <rect x="22" y="142" width="50" height="8" rx="1" fill="#e0dbd0"/>
+                <!-- Base (bottom serif/bracket) — wider than shaft -->
+                <rect x="22" y="268" width="50" height="8" rx="1" fill="#e0dbd0"/>
+                <rect x="18" y="276" width="58" height="6" rx="1" fill="#ede9e0"/>
+                <!-- Subtle highlight on capital -->
+                <line x1="20" y1="137" x2="74" y2="137" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
 
-                <!-- Right pillar -->
-                <rect x="230" y="130" width="50" height="140" rx="3" fill="url(#m1-pillar-r)" filter="url(#m1-shd)"/>
-                <rect x="232" y="132" width="46" height="136" rx="2" fill="none" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+                <!-- ===== RIGHT COLUMN — Roman numeral "I" style ===== -->
+                <rect x="254" y="148" width="38" height="120" fill="url(#m1-stone-shade)" filter="url(#m1-shd)"/>
+                <!-- Fluting lines -->
+                <line x1="262" y1="150" x2="262" y2="266" stroke="#b5afa2" stroke-width="0.7" stroke-opacity="0.4"/>
+                <line x1="268" y1="150" x2="268" y2="266" stroke="#b5afa2" stroke-width="0.5" stroke-opacity="0.35"/>
+                <line x1="274" y1="150" x2="274" y2="266" stroke="#b5afa2" stroke-width="0.7" stroke-opacity="0.4"/>
+                <line x1="280" y1="150" x2="280" y2="266" stroke="#b5afa2" stroke-width="0.5" stroke-opacity="0.35"/>
+                <line x1="286" y1="150" x2="286" y2="266" stroke="#b5afa2" stroke-width="0.7" stroke-opacity="0.4"/>
+                <!-- Capital -->
+                <rect x="244" y="136" width="58" height="6" rx="1" fill="#d4cfc4"/>
+                <rect x="248" y="142" width="50" height="8" rx="1" fill="#cac4b8"/>
+                <!-- Base -->
+                <rect x="248" y="268" width="50" height="8" rx="1" fill="#cac4b8"/>
+                <rect x="244" y="276" width="58" height="6" rx="1" fill="#d4cfc4"/>
 
-                <!-- Arch curve (thick) — outer -->
-                <path d="M20 140 L20 90 Q20 10 150 10 Q280 10 280 90 L280 140"
-                      fill="none" stroke="url(#m1-arch)" stroke-width="50" stroke-linecap="butt" filter="url(#m1-shd)"/>
+                <!-- ===== ARCH — thick off-white with masonry blocks ===== -->
+                <!-- Outer arch body -->
+                <path d="M28 145 L28 95 Q28 12 160 12 Q292 12 292 95 L292 145"
+                      fill="none" stroke="url(#m1-stone)" stroke-width="52" stroke-linecap="butt" filter="url(#m1-shd)"/>
 
-                <!-- Arch inner cutout (creates the opening) -->
-                <path d="M70 270 L70 120 Q70 52 150 52 Q230 52 230 120 L230 270"
+                <!-- Arch inner cutout -->
+                <path d="M78 290 L78 125 Q78 58 160 58 Q242 58 242 125 L242 290"
                       fill="#08090c"/>
 
-                <!-- Voussoir separation lines -->
-                <line x1="62" y1="60" x2="80" y2="76" stroke="#08090c" stroke-width="3" stroke-opacity="0.6"/>
-                <line x1="48" y1="82" x2="72" y2="92" stroke="#08090c" stroke-width="3" stroke-opacity="0.6"/>
-                <line x1="238" y1="60" x2="220" y2="76" stroke="#08090c" stroke-width="3" stroke-opacity="0.6"/>
-                <line x1="252" y1="82" x2="228" y2="92" stroke="#08090c" stroke-width="3" stroke-opacity="0.6"/>
+                <!-- ===== MASONRY BLOCK LINES — individual stones ===== -->
+                <!-- Radial joint lines (between stones around the curve) -->
+                <g stroke="#b5afa2" stroke-opacity="0.55" stroke-width="1.8">
+                    <!-- Left side joints -->
+                    <line x1="32" y1="108" x2="82" y2="118"/>
+                    <line x1="36" y1="85" x2="82" y2="100"/>
+                    <line x1="48" y1="64" x2="86" y2="82"/>
+                    <line x1="68" y1="46" x2="96" y2="68"/>
+                    <line x1="92" y1="32" x2="110" y2="58"/>
+                    <line x1="120" y1="22" x2="128" y2="52"/>
+                    <!-- Right side joints (mirrored) -->
+                    <line x1="288" y1="108" x2="238" y2="118"/>
+                    <line x1="284" y1="85" x2="238" y2="100"/>
+                    <line x1="272" y1="64" x2="234" y2="82"/>
+                    <line x1="252" y1="46" x2="224" y2="68"/>
+                    <line x1="228" y1="32" x2="210" y2="58"/>
+                    <line x1="200" y1="22" x2="192" y2="52"/>
+                </g>
 
-                <!-- KEYSTONE piece — the crown jewel -->
-                <path d="M125 4 L175 4 L172 46 L128 46 Z" fill="url(#m1-key)" filter="url(#m1-glow)"/>
-                <!-- Keystone inner bevel lines -->
-                <line x1="130" y1="10" x2="170" y2="10" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
-                <line x1="131" y1="18" x2="169" y2="18" stroke="white" stroke-opacity="0.1" stroke-width="0.5"/>
+                <!-- Horizontal course line across arch (ring separation) -->
+                <path d="M38 100 Q38 30 160 30 Q282 30 282 100"
+                      fill="none" stroke="#b5afa2" stroke-opacity="0.35" stroke-width="1.2"/>
 
-                <!-- Pillar caps -->
-                <rect x="16" y="125" width="58" height="10" rx="2" fill="#2563eb"/>
-                <rect x="226" y="125" width="58" height="10" rx="2" fill="#1e6fa0"/>
-                <line x1="18" y1="126" x2="72" y2="126" stroke="white" stroke-opacity="0.12" stroke-width="0.8"/>
-                <line x1="228" y1="126" x2="282" y2="126" stroke="white" stroke-opacity="0.08" stroke-width="0.8"/>
+                <!-- ===== KEYSTONE — golden crown jewel ===== -->
+                <path d="M132 5 L188 5 L184 52 L136 52 Z" fill="url(#m1-key)" filter="url(#m1-glow)"/>
+                <!-- Keystone bevel detail -->
+                <line x1="138" y1="12" x2="182" y2="12" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+                <line x1="139" y1="21" x2="181" y2="21" stroke="white" stroke-opacity="0.15" stroke-width="0.6"/>
+                <line x1="140" y1="30" x2="180" y2="30" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
+                <!-- Keystone bottom shadow -->
+                <line x1="137" y1="50" x2="183" y2="50" stroke="#b45309" stroke-opacity="0.4" stroke-width="0.8"/>
+                <!-- Keystone junction lines (where keystone meets arch) -->
+                <line x1="134" y1="7" x2="86" y2="58" stroke="#a89e90" stroke-width="1.8" stroke-opacity="0.5"/>
+                <line x1="186" y1="7" x2="234" y2="58" stroke="#a89e90" stroke-width="1.8" stroke-opacity="0.5"/>
 
-                <!-- Subtle top highlight on whole arch -->
-                <path d="M45 90 Q45 18 150 18 Q255 18 255 90" fill="none" stroke="white" stroke-opacity="0.07" stroke-width="1"/>
+                <!-- Ground/base line -->
+                <rect x="10" y="283" width="300" height="3" rx="1.5" fill="#cac4b8" opacity="0.3"/>
             </svg>
-            <div class="wm wm-w">KEYSTONE</div>
-            <div class="tl tl-a">Task Automation</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 7px; color: #ede9e0; margin-top: 16px;">KEYSTONE</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #f59e0b; opacity: 0.8; margin-top: 2px;">Task Automation</div>
         </div>
 
         <!-- LIGHT -->
         <div class="cell bg-lt">
             <span class="tag">Light</span>
-            <svg width="130" height="130" viewBox="0 0 300 280">
+            <svg width="150" height="150" viewBox="0 0 320 300">
                 <defs>
-                    <linearGradient id="m1l-arch" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1e40af"/>
-                        <stop offset="100%" stop-color="#164e7e"/>
+                    <linearGradient id="m1l-stone" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#c8c3b8"/>
+                        <stop offset="50%" stop-color="#b8b3a6"/>
+                        <stop offset="100%" stop-color="#a8a296"/>
                     </linearGradient>
                     <linearGradient id="m1l-key" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#d97706"/>
                         <stop offset="50%" stop-color="#b45309"/>
                         <stop offset="100%" stop-color="#92400e"/>
                     </linearGradient>
+                    <filter id="m1l-shd">
+                        <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.12"/>
+                    </filter>
                 </defs>
-                <rect x="20" y="130" width="50" height="140" rx="3" fill="#1e40af"/>
-                <rect x="230" y="130" width="50" height="140" rx="3" fill="#164e7e"/>
-                <path d="M20 140 L20 90 Q20 10 150 10 Q280 10 280 90 L280 140"
-                      fill="none" stroke="url(#m1l-arch)" stroke-width="50"/>
-                <path d="M70 270 L70 120 Q70 52 150 52 Q230 52 230 120 L230 270" fill="#f4f5f7"/>
-                <line x1="62" y1="60" x2="80" y2="76" stroke="#f4f5f7" stroke-width="3" stroke-opacity="0.7"/>
-                <line x1="48" y1="82" x2="72" y2="92" stroke="#f4f5f7" stroke-width="3" stroke-opacity="0.7"/>
-                <line x1="238" y1="60" x2="220" y2="76" stroke="#f4f5f7" stroke-width="3" stroke-opacity="0.7"/>
-                <line x1="252" y1="82" x2="228" y2="92" stroke="#f4f5f7" stroke-width="3" stroke-opacity="0.7"/>
-                <path d="M125 4 L175 4 L172 46 L128 46 Z" fill="url(#m1l-key)"/>
-                <rect x="16" y="125" width="58" height="10" rx="2" fill="#1e40af"/>
-                <rect x="226" y="125" width="58" height="10" rx="2" fill="#164e7e"/>
+
+                <!-- Left column -->
+                <rect x="28" y="148" width="38" height="120" fill="#b8b3a6" filter="url(#m1l-shd)"/>
+                <line x1="36" y1="150" x2="36" y2="266" stroke="#a8a296" stroke-width="0.7" stroke-opacity="0.5"/>
+                <line x1="42" y1="150" x2="42" y2="266" stroke="#a8a296" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="48" y1="150" x2="48" y2="266" stroke="#a8a296" stroke-width="0.7" stroke-opacity="0.5"/>
+                <line x1="54" y1="150" x2="54" y2="266" stroke="#a8a296" stroke-width="0.5" stroke-opacity="0.4"/>
+                <line x1="60" y1="150" x2="60" y2="266" stroke="#a8a296" stroke-width="0.7" stroke-opacity="0.5"/>
+                <rect x="18" y="136" width="58" height="6" rx="1" fill="#c8c3b8"/>
+                <rect x="22" y="142" width="50" height="8" rx="1" fill="#b8b3a6"/>
+                <rect x="22" y="268" width="50" height="8" rx="1" fill="#b8b3a6"/>
+                <rect x="18" y="276" width="58" height="6" rx="1" fill="#c8c3b8"/>
+
+                <!-- Right column -->
+                <rect x="254" y="148" width="38" height="120" fill="#a8a296" filter="url(#m1l-shd)"/>
+                <line x1="262" y1="150" x2="262" y2="266" stroke="#989286" stroke-width="0.7" stroke-opacity="0.4"/>
+                <line x1="268" y1="150" x2="268" y2="266" stroke="#989286" stroke-width="0.5" stroke-opacity="0.35"/>
+                <line x1="274" y1="150" x2="274" y2="266" stroke="#989286" stroke-width="0.7" stroke-opacity="0.4"/>
+                <line x1="280" y1="150" x2="280" y2="266" stroke="#989286" stroke-width="0.5" stroke-opacity="0.35"/>
+                <line x1="286" y1="150" x2="286" y2="266" stroke="#989286" stroke-width="0.7" stroke-opacity="0.4"/>
+                <rect x="244" y="136" width="58" height="6" rx="1" fill="#b8b3a6"/>
+                <rect x="248" y="142" width="50" height="8" rx="1" fill="#a8a296"/>
+                <rect x="248" y="268" width="50" height="8" rx="1" fill="#a8a296"/>
+                <rect x="244" y="276" width="58" height="6" rx="1" fill="#b8b3a6"/>
+
+                <!-- Arch -->
+                <path d="M28 145 L28 95 Q28 12 160 12 Q292 12 292 95 L292 145"
+                      fill="none" stroke="url(#m1l-stone)" stroke-width="52" filter="url(#m1l-shd)"/>
+                <path d="M78 290 L78 125 Q78 58 160 58 Q242 58 242 125 L242 290" fill="#f4f5f7"/>
+
+                <!-- Masonry joints -->
+                <g stroke="#989286" stroke-opacity="0.45" stroke-width="1.8">
+                    <line x1="32" y1="108" x2="82" y2="118"/>
+                    <line x1="36" y1="85" x2="82" y2="100"/>
+                    <line x1="48" y1="64" x2="86" y2="82"/>
+                    <line x1="68" y1="46" x2="96" y2="68"/>
+                    <line x1="92" y1="32" x2="110" y2="58"/>
+                    <line x1="120" y1="22" x2="128" y2="52"/>
+                    <line x1="288" y1="108" x2="238" y2="118"/>
+                    <line x1="284" y1="85" x2="238" y2="100"/>
+                    <line x1="272" y1="64" x2="234" y2="82"/>
+                    <line x1="252" y1="46" x2="224" y2="68"/>
+                    <line x1="228" y1="32" x2="210" y2="58"/>
+                    <line x1="200" y1="22" x2="192" y2="52"/>
+                </g>
+                <path d="M38 100 Q38 30 160 30 Q282 30 282 100"
+                      fill="none" stroke="#989286" stroke-opacity="0.3" stroke-width="1.2"/>
+
+                <!-- Keystone -->
+                <path d="M132 5 L188 5 L184 52 L136 52 Z" fill="url(#m1l-key)"/>
+                <line x1="134" y1="7" x2="86" y2="58" stroke="#989286" stroke-width="1.8" stroke-opacity="0.4"/>
+                <line x1="186" y1="7" x2="234" y2="58" stroke="#989286" stroke-width="1.8" stroke-opacity="0.4"/>
+                <rect x="10" y="283" width="300" height="3" rx="1.5" fill="#a8a296" opacity="0.3"/>
             </svg>
-            <div class="wm wm-d">KEYSTONE</div>
-            <div class="tl tl-ad">Task Automation</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 7px; color: #1a1a1a; margin-top: 16px;">KEYSTONE</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #b45309; opacity: 0.8; margin-top: 2px;">Task Automation</div>
         </div>
 
         <!-- WEBSITE BG -->
         <div class="cell bg-web">
             <span class="tag" style="color:#445">Website</span>
             <div class="lockup-h">
-                <svg width="60" height="60" viewBox="0 0 300 280">
+                <svg width="68" height="68" viewBox="0 0 320 300">
                     <defs>
-                        <linearGradient id="m1w-arch" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#60a5fa"/>
-                            <stop offset="100%" stop-color="#38bdf8"/>
+                        <linearGradient id="m1w-stone" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ede9e0"/>
+                            <stop offset="100%" stop-color="#d4cfc4"/>
                         </linearGradient>
                         <linearGradient id="m1w-key" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stop-color="#fbbf24"/>
                             <stop offset="100%" stop-color="#f59e0b"/>
                         </linearGradient>
                     </defs>
-                    <rect x="20" y="130" width="50" height="140" rx="3" fill="#60a5fa"/>
-                    <rect x="230" y="130" width="50" height="140" rx="3" fill="#38bdf8"/>
-                    <path d="M20 140 L20 90 Q20 10 150 10 Q280 10 280 90 L280 140"
-                          fill="none" stroke="url(#m1w-arch)" stroke-width="50"/>
-                    <path d="M70 270 L70 120 Q70 52 150 52 Q230 52 230 120 L230 270" fill="#0b1120"/>
-                    <path d="M125 4 L175 4 L172 46 L128 46 Z" fill="url(#m1w-key)"/>
-                    <rect x="16" y="125" width="58" height="10" rx="2" fill="#60a5fa"/>
-                    <rect x="226" y="125" width="58" height="10" rx="2" fill="#38bdf8"/>
+                    <!-- Left column -->
+                    <rect x="28" y="148" width="38" height="120" fill="#ddd8ce"/>
+                    <line x1="36" y1="150" x2="36" y2="266" stroke="#c5c0b4" stroke-width="0.7" stroke-opacity="0.5"/>
+                    <line x1="48" y1="150" x2="48" y2="266" stroke="#c5c0b4" stroke-width="0.7" stroke-opacity="0.5"/>
+                    <line x1="60" y1="150" x2="60" y2="266" stroke="#c5c0b4" stroke-width="0.7" stroke-opacity="0.5"/>
+                    <rect x="18" y="136" width="58" height="6" rx="1" fill="#e8e3da"/>
+                    <rect x="22" y="142" width="50" height="8" rx="1" fill="#ddd8ce"/>
+                    <rect x="22" y="268" width="50" height="8" rx="1" fill="#ddd8ce"/>
+                    <rect x="18" y="276" width="58" height="6" rx="1" fill="#e8e3da"/>
+                    <!-- Right column -->
+                    <rect x="254" y="148" width="38" height="120" fill="#cdc8bc"/>
+                    <line x1="262" y1="150" x2="262" y2="266" stroke="#b5b0a4" stroke-width="0.7" stroke-opacity="0.4"/>
+                    <line x1="274" y1="150" x2="274" y2="266" stroke="#b5b0a4" stroke-width="0.7" stroke-opacity="0.4"/>
+                    <line x1="286" y1="150" x2="286" y2="266" stroke="#b5b0a4" stroke-width="0.7" stroke-opacity="0.4"/>
+                    <rect x="244" y="136" width="58" height="6" rx="1" fill="#d4cfc4"/>
+                    <rect x="248" y="142" width="50" height="8" rx="1" fill="#cdc8bc"/>
+                    <rect x="248" y="268" width="50" height="8" rx="1" fill="#cdc8bc"/>
+                    <rect x="244" y="276" width="58" height="6" rx="1" fill="#d4cfc4"/>
+                    <!-- Arch -->
+                    <path d="M28 145 L28 95 Q28 12 160 12 Q292 12 292 95 L292 145"
+                          fill="none" stroke="url(#m1w-stone)" stroke-width="52"/>
+                    <path d="M78 290 L78 125 Q78 58 160 58 Q242 58 242 125 L242 290" fill="#0b1120"/>
+                    <!-- Masonry -->
+                    <g stroke="#b5b0a4" stroke-opacity="0.45" stroke-width="1.8">
+                        <line x1="32" y1="108" x2="82" y2="118"/>
+                        <line x1="36" y1="85" x2="82" y2="100"/>
+                        <line x1="48" y1="64" x2="86" y2="82"/>
+                        <line x1="68" y1="46" x2="96" y2="68"/>
+                        <line x1="92" y1="32" x2="110" y2="58"/>
+                        <line x1="120" y1="22" x2="128" y2="52"/>
+                        <line x1="288" y1="108" x2="238" y2="118"/>
+                        <line x1="284" y1="85" x2="238" y2="100"/>
+                        <line x1="272" y1="64" x2="234" y2="82"/>
+                        <line x1="252" y1="46" x2="224" y2="68"/>
+                        <line x1="228" y1="32" x2="210" y2="58"/>
+                        <line x1="200" y1="22" x2="192" y2="52"/>
+                    </g>
+                    <path d="M38 100 Q38 30 160 30 Q282 30 282 100"
+                          fill="none" stroke="#b5b0a4" stroke-opacity="0.3" stroke-width="1.2"/>
+                    <!-- Keystone -->
+                    <path d="M132 5 L188 5 L184 52 L136 52 Z" fill="url(#m1w-key)"/>
+                    <line x1="134" y1="7" x2="86" y2="58" stroke="#a89e90" stroke-width="1.8" stroke-opacity="0.4"/>
+                    <line x1="186" y1="7" x2="234" y2="58" stroke="#a89e90" stroke-width="1.8" stroke-opacity="0.4"/>
                 </svg>
                 <div class="text">
-                    <div class="wm wm-w">KEYSTONE</div>
-                    <div class="tl tl-a">Task Automation</div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.65rem; letter-spacing: 7px; color: #ede9e0;">KEYSTONE</div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.62rem; letter-spacing: 5px; text-transform: uppercase; color: #f59e0b; opacity: 0.8; margin-top: 1px;">Task Automation</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="notes">
-        <strong>The Monument.</strong> Full Roman arch with thick pillars and heavy stonework. The golden keystone sits at the crown — the piece that holds it all together. Voussoir lines separate the arch stones. Pillar caps add classical detail. The blue deepens from left to right. This is the most traditional and authoritative — says "established, reliable, structural."
+        <strong>The Monument (Refined).</strong> Off-white limestone arch and columns with visible masonry blocks throughout the curve. The columns are styled with classical fluting (vertical grooves) and serif-like capitals and bases — inspired by Roman column proportions. Individual stones are separated by radial joint lines with a horizontal ring course for depth. The golden keystone at the crown is the only coloured element — it pops against the pale stone. Font upgraded to Cormorant Garamond (elegant serif) to match the classical architecture.
     </div>
 </div>
 

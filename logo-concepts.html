@@ -69,7 +69,7 @@
             font-size: 0.7rem;
             letter-spacing: 4px;
             text-transform: uppercase;
-            color: #d4a54a;
+            color: #c89838;
             opacity: 0.8;
             margin-top: 5px;
         }
@@ -101,7 +101,7 @@
             gap: 14px;
         }
         .font-card-head .letter {
-            background: linear-gradient(135deg, #d4a54a, #b8860b);
+            background: linear-gradient(135deg, #c89838, #9a6810);
             color: #1a1200;
             font-weight: 700;
             font-size: 0.72rem;
@@ -154,8 +154,8 @@
 
         .wm-dark { color: #fff; }
         .wm-light { color: #111; }
-        .tl-dark { color: #d4a54a; opacity: 0.8; }
-        .tl-light { color: #8b6914; opacity: 0.8; }
+        .tl-dark { color: #c89838; opacity: 0.8; }
+        .tl-light { color: #7d5e16; opacity: 0.8; }
 
         .notes {
             padding: 16px 28px;
@@ -186,270 +186,128 @@
 <!-- ══════════════════════════════════════════════════════ -->
 <!-- HERO — Large refined Monument on dark background     -->
 <!-- ══════════════════════════════════════════════════════ -->
-<div class="card">
-    <div class="card-head">
-        <span class="num">01</span>
-        <span class="card-name">The Monument</span>
-        <span class="card-desc">Dominant arch &bull; visible stone masonry &bull; golden keystone crown</span>
-    </div>
-    <div class="row">
-        <!-- DARK -->
-        <div class="cell bg-dk">
-            <span class="tag" style="color:#555">Dark</span>
-            <svg width="150" height="150" viewBox="0 0 320 300">
-                <defs>
-                    <linearGradient id="m1-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ede9e0"/>
-                        <stop offset="50%" stop-color="#e0dbd0"/>
-                        <stop offset="100%" stop-color="#d4cfc4"/>
-                    </linearGradient>
-                    <linearGradient id="m1-key" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#fde68a"/>
-                        <stop offset="30%" stop-color="#fbbf24"/>
-                        <stop offset="70%" stop-color="#f59e0b"/>
-                        <stop offset="100%" stop-color="#d97706"/>
-                    </linearGradient>
-                    <filter id="m1-glow">
-                        <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#fbbf24" flood-opacity="0.35"/>
-                    </filter>
-                    <filter id="m1-shd">
-                        <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
-                    </filter>
-                </defs>
+<div class="hero">
+    <span class="hero-label">Refined Monument</span>
 
-                <!-- ===== ARCH BODY (outer shape) ===== -->
-                <path d="M 300 282 L 300 230 A 140 205 0 0 0 20 230 L 20 282 Z"
-                      fill="url(#m1-stone)" filter="url(#m1-shd)"/>
+    <svg width="240" height="240" viewBox="0 0 360 340">
+        <defs>
+            <!-- Gold keystone gradient -->
+            <linearGradient id="h-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f5d478"/>
+                <stop offset="30%" stop-color="#e8a830"/>
+                <stop offset="70%" stop-color="#d4901a"/>
+                <stop offset="100%" stop-color="#b86e12"/>
+            </linearGradient>
+            <!-- Column shading -->
+            <linearGradient id="h-col-shade" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#c8ced8"/>
+                <stop offset="30%" stop-color="#d8dde9"/>
+                <stop offset="70%" stop-color="#dee3ec"/>
+                <stop offset="100%" stop-color="#c8ced8"/>
+            </linearGradient>
+            <filter id="h-glow">
+                <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#e8a830" flood-opacity="0.35"/>
+            </filter>
+            <filter id="h-shd">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+            </filter>
+            <!-- Clip arch to viewBox -->
+            <clipPath id="h-arch-clip">
+                <rect x="28" y="0" width="304" height="228"/>
+            </clipPath>
+        </defs>
 
-                <!-- ===== INNER VOID (cut-out) ===== -->
-                <path d="M 75 282 L 75 230 A 85 145 0 0 1 245 230 L 245 282 Z"
-                      fill="#08090c"/>
+        <!-- ====== LEFT COLUMN — Short Doric (base y=310, capital top y=230) ====== -->
+        <!-- Column base plinth -->
+        <rect x="30" y="304" width="56" height="6" rx="1" fill="#ced4de" filter="url(#h-shd)"/>
+        <rect x="33" y="296" width="50" height="10" rx="1" fill="#d5dbe5"/>
+        <line x1="33" y1="297" x2="83" y2="297" stroke="#e2e6ef" stroke-width="0.6" stroke-opacity="0.7"/>
 
-                <!-- ===== ALTERNATING STONE SHADE PATCHES ===== -->
-                <g fill="#b5afa2" opacity="0.12">
-                    <path d="M 296 183 A 140 205 0 0 0 285 138 L 236 165 A 85 145 0 0 1 243 197 Z"/>
-                    <path d="M 267 98 A 140 205 0 0 0 243 65 L 211 114 A 85 145 0 0 1 225 137 Z"/>
-                    <path d="M 215 41 A 140 205 0 0 0 184 28 L 175 87 A 85 145 0 0 1 193 97 Z"/>
-                    <path d="M 105 41 A 140 205 0 0 0 77 65 L 109 114 A 85 145 0 0 1 127 97 Z"/>
-                    <path d="M 53 98 A 140 205 0 0 0 35 138 L 84 165 A 85 145 0 0 1 95 137 Z"/>
-                    <path d="M 24 183 A 140 205 0 0 0 20 230 L 75 230 A 85 145 0 0 1 77 197 Z"/>
-                </g>
+        <!-- Column shaft — tapered (wider at bottom: 40px, top: 34px) -->
+        <polygon points="38,296 78,296 75,240 41,240" fill="url(#h-col-shade)"/>
+        <!-- Fluting lines -->
+        <line x1="47" y1="292" x2="49" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="54" y1="292" x2="55" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="61" y1="292" x2="61" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="68" y1="292" x2="67" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <!-- Shaft highlight -->
+        <line x1="51" y1="292" x2="52" y2="244" stroke="#e8edf5" stroke-width="0.4" stroke-opacity="0.3"/>
 
-                <!-- ===== RADIAL MORTAR LINES (voussoir boundaries) ===== -->
-                <g stroke="#08090c" stroke-width="3" stroke-opacity="0.8">
-                    <!-- Right side (bottom to top) -->
-                    <line x1="243" y1="197" x2="296" y2="183"/>
-                    <line x1="236" y1="165" x2="285" y2="138"/>
-                    <line x1="225" y1="137" x2="267" y2="98"/>
-                    <line x1="211" y1="114" x2="243" y2="65"/>
-                    <line x1="193" y1="97" x2="215" y2="41"/>
-                    <line x1="175" y1="87" x2="184" y2="28"/>
-                    <!-- Left side (top to bottom, mirrored) -->
-                    <line x1="145" y1="87" x2="136" y2="28"/>
-                    <line x1="127" y1="97" x2="105" y2="41"/>
-                    <line x1="109" y1="114" x2="77" y2="65"/>
-                    <line x1="95" y1="137" x2="53" y2="98"/>
-                    <line x1="84" y1="165" x2="35" y2="138"/>
-                    <line x1="77" y1="197" x2="24" y2="183"/>
-                </g>
+        <!-- Column capital -->
+        <rect x="35" y="236" width="46" height="6" rx="1" fill="#d8dde9"/>
+        <rect x="31" y="230" width="54" height="8" rx="1.5" fill="#dee3ec"/>
+        <line x1="32" y1="231" x2="84" y2="231" stroke="#e8edf5" stroke-width="0.6" stroke-opacity="0.6"/>
+        <rect x="33" y="234" width="50" height="4" rx="1" fill="#d2d8e2"/>
 
-                <!-- ===== CONCENTRIC RING COURSE ===== -->
-                <path d="M 273 230 A 113 175 0 0 0 47 230"
-                      fill="none" stroke="#08090c" stroke-width="2.5" stroke-opacity="0.6"/>
+        <!-- ====== RIGHT COLUMN — Short Doric ====== -->
+        <!-- Column base plinth -->
+        <rect x="274" y="304" width="56" height="6" rx="1" fill="#c8ced8" filter="url(#h-shd)"/>
+        <rect x="277" y="296" width="50" height="10" rx="1" fill="#ced4de"/>
+        <line x1="277" y1="297" x2="327" y2="297" stroke="#d8dde9" stroke-width="0.6" stroke-opacity="0.6"/>
 
-                <!-- ===== KEYSTONE — golden crown ===== -->
-                <path d="M 136 28 A 140 205 0 0 1 184 28 L 175 87 L 145 87 Z"
-                      fill="url(#m1-key)" filter="url(#m1-glow)"/>
-                <!-- Keystone highlight lines -->
-                <line x1="142" y1="45" x2="178" y2="45" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
-                <line x1="143" y1="58" x2="177" y2="58" stroke="white" stroke-opacity="0.15" stroke-width="0.6"/>
-                <line x1="144" y1="71" x2="176" y2="71" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
-                <!-- Keystone bottom shadow -->
-                <line x1="146" y1="85" x2="174" y2="85" stroke="#b45309" stroke-opacity="0.4" stroke-width="0.8"/>
+        <!-- Column shaft — tapered -->
+        <polygon points="282,296 322,296 319,240 285,240" fill="url(#h-col-shade)"/>
+        <!-- Fluting lines -->
+        <line x1="291" y1="292" x2="293" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="298" y1="292" x2="299" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="305" y1="292" x2="305" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <line x1="312" y1="292" x2="311" y2="244" stroke="#b8bfc9" stroke-width="0.7" stroke-opacity="0.5"/>
+        <!-- Shaft highlight -->
+        <line x1="295" y1="292" x2="296" y2="244" stroke="#e8edf5" stroke-width="0.4" stroke-opacity="0.3"/>
 
-                <!-- ===== PILLAR MORTAR LINES ===== -->
-                <!-- Left pillar horizontal courses -->
-                <g stroke="#08090c" stroke-width="2.5" stroke-opacity="0.8">
-                    <line x1="20" y1="245" x2="75" y2="245"/>
-                    <line x1="20" y1="260" x2="75" y2="260"/>
-                    <!-- Right pillar horizontal courses -->
-                    <line x1="245" y1="245" x2="300" y2="245"/>
-                    <line x1="245" y1="260" x2="300" y2="260"/>
-                </g>
-                <!-- Left pillar vertical joints (staggered bond) -->
-                <g stroke="#08090c" stroke-width="2" stroke-opacity="0.7">
-                    <line x1="48" y1="230" x2="48" y2="245"/>
-                    <line x1="35" y1="245" x2="35" y2="260"/>
-                    <line x1="60" y1="245" x2="60" y2="260"/>
-                    <line x1="48" y1="260" x2="48" y2="282"/>
-                    <!-- Right pillar vertical joints (staggered bond) -->
-                    <line x1="273" y1="230" x2="273" y2="245"/>
-                    <line x1="260" y1="245" x2="260" y2="260"/>
-                    <line x1="285" y1="245" x2="285" y2="260"/>
-                    <line x1="273" y1="260" x2="273" y2="282"/>
-                </g>
+        <!-- Column capital -->
+        <rect x="279" y="236" width="46" height="6" rx="1" fill="#d0d6e0"/>
+        <rect x="275" y="230" width="54" height="8" rx="1.5" fill="#d5dbe5"/>
+        <line x1="276" y1="231" x2="328" y2="231" stroke="#dee3ec" stroke-width="0.6" stroke-opacity="0.5"/>
+        <rect x="277" y="234" width="50" height="4" rx="1" fill="#c8cfd9"/>
 
-                <!-- Ground line -->
-                <rect x="10" y="283" width="300" height="3" rx="1.5" fill="#cac4b8" opacity="0.3"/>
-            </svg>
-            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 7px; color: #ede9e0; margin-top: 16px;">KEYSTONE</div>
-            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #f59e0b; opacity: 0.8; margin-top: 2px;">Task Automation</div>
-        </div>
+        <!-- ====== ENTABLATURE (beam across top of columns) ====== -->
+        <rect x="28" y="220" width="304" height="12" rx="1" fill="#d8dde9" filter="url(#h-shd)"/>
+        <line x1="28" y1="221" x2="332" y2="221" stroke="#e2e6ef" stroke-width="0.8" stroke-opacity="0.5"/>
 
-        <!-- LIGHT -->
-        <div class="cell bg-lt">
-            <span class="tag" style="color:#333">Light</span>
-            <svg width="150" height="150" viewBox="0 0 320 300">
-                <defs>
-                    <linearGradient id="m1l-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#d4cfc4"/>
-                        <stop offset="50%" stop-color="#c8c3b8"/>
-                        <stop offset="100%" stop-color="#b8b3a8"/>
-                    </linearGradient>
-                    <linearGradient id="m1l-key" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#d97706"/>
-                        <stop offset="30%" stop-color="#b45309"/>
-                        <stop offset="70%" stop-color="#92400e"/>
-                        <stop offset="100%" stop-color="#78350f"/>
-                    </linearGradient>
-                    <filter id="m1l-shd">
-                        <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
-                    </filter>
-                </defs>
+        <!-- ====== ARCH — Individual voussoir stone blocks ====== -->
+        <!-- cx=180, cy=230, outerR=220, innerR=145 -->
+        <!-- 7 left + 1 keystone (14deg) + 7 right, each regular stone ~11.86deg -->
+        <g clip-path="url(#h-arch-clip)">
+            <!-- Left side voussoirs (from 180 deg down to keystone at 97 deg) -->
+            <path d="M -40.0 230.0 A 220 220 0 0 0 -35.31 184.8 L 38.09 200.21 A 145 145 0 0 1 35.0 230.0 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M -35.31 184.8 A 220 220 0 0 0 -21.42 141.52 L 47.24 171.68 A 145 145 0 0 1 38.09 200.21 Z" fill="#d8dde9" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M -21.42 141.52 A 220 220 0 0 0 1.05 102.02 L 62.06 145.65 A 145 145 0 0 1 47.24 171.68 Z" fill="#dee3ec" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 1.05 102.02 A 220 220 0 0 0 31.17 67.98 L 81.91 123.22 A 145 145 0 0 1 62.06 145.65 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 31.17 67.98 A 220 220 0 0 0 67.63 40.86 L 105.94 105.34 A 145 145 0 0 1 81.91 123.22 Z" fill="#d8dde9" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 67.63 40.86 A 220 220 0 0 0 108.89 21.81 L 133.13 92.78 A 145 145 0 0 1 105.94 105.34 Z" fill="#dee3ec" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 108.89 21.81 A 220 220 0 0 0 153.19 11.64 L 162.33 86.08 A 145 145 0 0 1 133.13 92.78 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
 
-                <!-- Arch body -->
-                <path d="M 300 282 L 300 230 A 140 205 0 0 0 20 230 L 20 282 Z"
-                      fill="url(#m1l-stone)" filter="url(#m1l-shd)"/>
+            <!-- KEYSTONE — golden crown jewel (97 deg to 83 deg, centered on 90) -->
+            <path d="M 153.19 11.64 A 220 220 0 0 0 206.81 11.64 L 197.67 86.08 A 145 145 0 0 1 162.33 86.08 Z" fill="url(#h-gold)" stroke="#9a6810" stroke-width="1" filter="url(#h-glow)"/>
+            <!-- Keystone bevel highlights -->
+            <line x1="158" y1="20" x2="202" y2="20" stroke="white" stroke-opacity="0.4" stroke-width="0.8"/>
+            <line x1="159" y1="30" x2="201" y2="30" stroke="white" stroke-opacity="0.15" stroke-width="0.5"/>
+            <line x1="160" y1="40" x2="200" y2="40" stroke="white" stroke-opacity="0.08" stroke-width="0.5"/>
+            <line x1="163" y1="82" x2="197" y2="82" stroke="#9a6810" stroke-opacity="0.4" stroke-width="0.8"/>
 
-                <!-- Inner void -->
-                <path d="M 75 282 L 75 230 A 85 145 0 0 1 245 230 L 245 282 Z"
-                      fill="#f4f5f7"/>
+            <!-- Right side voussoirs (from keystone at 83 deg down to 0 deg) -->
+            <path d="M 206.81 11.64 A 220 220 0 0 0 251.11 21.81 L 226.87 92.78 A 145 145 0 0 1 197.67 86.08 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 251.11 21.81 A 220 220 0 0 0 292.37 40.86 L 254.06 105.34 A 145 145 0 0 1 226.87 92.78 Z" fill="#d8dde9" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 292.37 40.86 A 220 220 0 0 0 328.83 67.98 L 278.09 123.22 A 145 145 0 0 1 254.06 105.34 Z" fill="#dee3ec" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 328.83 67.98 A 220 220 0 0 0 358.95 102.02 L 297.94 145.65 A 145 145 0 0 1 278.09 123.22 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 358.95 102.02 A 220 220 0 0 0 381.42 141.52 L 312.76 171.68 A 145 145 0 0 1 297.94 145.65 Z" fill="#d8dde9" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 381.42 141.52 A 220 220 0 0 0 395.31 184.8 L 321.91 200.21 A 145 145 0 0 1 312.76 171.68 Z" fill="#dee3ec" stroke="#181c28" stroke-width="1.5"/>
+            <path d="M 395.31 184.8 A 220 220 0 0 0 400.0 230.0 L 325.0 230.0 A 145 145 0 0 1 321.91 200.21 Z" fill="#e2e6ef" stroke="#181c28" stroke-width="1.5"/>
+        </g>
 
-                <!-- Alternating stone shade patches -->
-                <g fill="#8a8578" opacity="0.12">
-                    <path d="M 296 183 A 140 205 0 0 0 285 138 L 236 165 A 85 145 0 0 1 243 197 Z"/>
-                    <path d="M 267 98 A 140 205 0 0 0 243 65 L 211 114 A 85 145 0 0 1 225 137 Z"/>
-                    <path d="M 215 41 A 140 205 0 0 0 184 28 L 175 87 A 85 145 0 0 1 193 97 Z"/>
-                    <path d="M 105 41 A 140 205 0 0 0 77 65 L 109 114 A 85 145 0 0 1 127 97 Z"/>
-                    <path d="M 53 98 A 140 205 0 0 0 35 138 L 84 165 A 85 145 0 0 1 95 137 Z"/>
-                    <path d="M 24 183 A 140 205 0 0 0 20 230 L 75 230 A 85 145 0 0 1 77 197 Z"/>
-                </g>
+        <!-- Inner arch opening — cut out the center -->
+        <path d="M 35 340 L 35 230 A 145 145 0 0 1 325 230 L 325 340 Z" fill="#08090c"/>
 
-                <!-- Radial mortar lines -->
-                <g stroke="#989286" stroke-width="3" stroke-opacity="0.7">
-                    <line x1="243" y1="197" x2="296" y2="183"/>
-                    <line x1="236" y1="165" x2="285" y2="138"/>
-                    <line x1="225" y1="137" x2="267" y2="98"/>
-                    <line x1="211" y1="114" x2="243" y2="65"/>
-                    <line x1="193" y1="97" x2="215" y2="41"/>
-                    <line x1="175" y1="87" x2="184" y2="28"/>
-                    <line x1="145" y1="87" x2="136" y2="28"/>
-                    <line x1="127" y1="97" x2="105" y2="41"/>
-                    <line x1="109" y1="114" x2="77" y2="65"/>
-                    <line x1="95" y1="137" x2="53" y2="98"/>
-                    <line x1="84" y1="165" x2="35" y2="138"/>
-                    <line x1="77" y1="197" x2="24" y2="183"/>
-                </g>
+        <!-- Outer arch highlight -->
+        <path d="M 50 230 A 210 210 0 0 1 310 230" fill="none" stroke="white" stroke-opacity="0.04" stroke-width="1" transform="translate(0,-2)"/>
 
-                <!-- Concentric ring course -->
-                <path d="M 273 230 A 113 175 0 0 0 47 230"
-                      fill="none" stroke="#989286" stroke-width="2.5" stroke-opacity="0.5"/>
+        <!-- Base line -->
+        <rect x="24" y="310" width="312" height="3" rx="1" fill="#c8ced8" opacity="0.4"/>
+    </svg>
 
-                <!-- Keystone -->
-                <path d="M 136 28 A 140 205 0 0 1 184 28 L 175 87 L 145 87 Z"
-                      fill="url(#m1l-key)"/>
-
-                <!-- Pillar mortar lines -->
-                <g stroke="#989286" stroke-width="2.5" stroke-opacity="0.7">
-                    <line x1="20" y1="245" x2="75" y2="245"/>
-                    <line x1="20" y1="260" x2="75" y2="260"/>
-                    <line x1="245" y1="245" x2="300" y2="245"/>
-                    <line x1="245" y1="260" x2="300" y2="260"/>
-                </g>
-                <g stroke="#989286" stroke-width="2" stroke-opacity="0.6">
-                    <line x1="48" y1="230" x2="48" y2="245"/>
-                    <line x1="35" y1="245" x2="35" y2="260"/>
-                    <line x1="60" y1="245" x2="60" y2="260"/>
-                    <line x1="48" y1="260" x2="48" y2="282"/>
-                    <line x1="273" y1="230" x2="273" y2="245"/>
-                    <line x1="260" y1="245" x2="260" y2="260"/>
-                    <line x1="285" y1="245" x2="285" y2="260"/>
-                    <line x1="273" y1="260" x2="273" y2="282"/>
-                </g>
-
-                <!-- Ground line -->
-                <rect x="10" y="283" width="300" height="3" rx="1.5" fill="#a8a296" opacity="0.3"/>
-            </svg>
-            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.55rem; letter-spacing: 7px; color: #1a1a1a; margin-top: 16px;">KEYSTONE</div>
-            <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #b45309; opacity: 0.8; margin-top: 2px;">Task Automation</div>
-        </div>
-
-        <!-- WEBSITE BG -->
-        <div class="cell bg-web">
-            <span class="tag" style="color:#445">Website</span>
-            <div class="lockup-h">
-                <svg width="68" height="68" viewBox="0 0 320 300">
-                    <defs>
-                        <linearGradient id="m1w-stone" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ede9e0"/>
-                            <stop offset="100%" stop-color="#d4cfc4"/>
-                        </linearGradient>
-                        <linearGradient id="m1w-key" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#fbbf24"/>
-                            <stop offset="100%" stop-color="#f59e0b"/>
-                        </linearGradient>
-                    </defs>
-
-                    <!-- Arch body -->
-                    <path d="M 300 282 L 300 230 A 140 205 0 0 0 20 230 L 20 282 Z"
-                          fill="url(#m1w-stone)"/>
-
-                    <!-- Inner void -->
-                    <path d="M 75 282 L 75 230 A 85 145 0 0 1 245 230 L 245 282 Z"
-                          fill="#0b1120"/>
-
-                    <!-- Radial mortar lines (thicker for small display) -->
-                    <g stroke="#0b1120" stroke-width="3.5" stroke-opacity="0.8">
-                        <line x1="243" y1="197" x2="296" y2="183"/>
-                        <line x1="236" y1="165" x2="285" y2="138"/>
-                        <line x1="225" y1="137" x2="267" y2="98"/>
-                        <line x1="211" y1="114" x2="243" y2="65"/>
-                        <line x1="193" y1="97" x2="215" y2="41"/>
-                        <line x1="175" y1="87" x2="184" y2="28"/>
-                        <line x1="145" y1="87" x2="136" y2="28"/>
-                        <line x1="127" y1="97" x2="105" y2="41"/>
-                        <line x1="109" y1="114" x2="77" y2="65"/>
-                        <line x1="95" y1="137" x2="53" y2="98"/>
-                        <line x1="84" y1="165" x2="35" y2="138"/>
-                        <line x1="77" y1="197" x2="24" y2="183"/>
-                    </g>
-
-                    <!-- Concentric ring course -->
-                    <path d="M 273 230 A 113 175 0 0 0 47 230"
-                          fill="none" stroke="#0b1120" stroke-width="3" stroke-opacity="0.5"/>
-
-                    <!-- Keystone -->
-                    <path d="M 136 28 A 140 205 0 0 1 184 28 L 175 87 L 145 87 Z"
-                          fill="url(#m1w-key)"/>
-
-                    <!-- Pillar mortar (simplified for small size) -->
-                    <g stroke="#0b1120" stroke-width="3" stroke-opacity="0.7">
-                        <line x1="20" y1="250" x2="75" y2="250"/>
-                        <line x1="20" y1="266" x2="75" y2="266"/>
-                        <line x1="245" y1="250" x2="300" y2="250"/>
-                        <line x1="245" y1="266" x2="300" y2="266"/>
-                    </g>
-                </svg>
-                <div class="text">
-                    <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.65rem; letter-spacing: 7px; color: #ede9e0;">KEYSTONE</div>
-                    <div style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 0.62rem; letter-spacing: 5px; text-transform: uppercase; color: #f59e0b; opacity: 0.8; margin-top: 1px;">Task Automation</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="notes">
-        <strong>The Monument (Refined).</strong> Arch-dominant proportions with clearly defined individual stone blocks throughout the entire curve. Short pillars support a towering arch — the stonework is the star. Each voussoir (wedge-shaped stone) is separated by thick mortar lines with a concentric ring course splitting the arch into inner and outer stone rows. Alternating stone shading creates natural colour variation. The golden keystone at the crown is the only coloured element, contrasting beautifully with the off-white/cream limestone. Pillars show horizontal courses with staggered bond pattern. Font: Cormorant Garamond (elegant serif) to match the classical masonry.
-    </div>
+    <div class="wm">KEYSTONE</div>
+    <div class="tl">Task Automation</div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════ -->
@@ -473,7 +331,7 @@
                 <use href="#monument-dk"/>
             </svg>
             <div style="font-family:'Cinzel',serif; font-weight:600; letter-spacing:7px; font-size:1.4rem; margin-top:16px; color:#fff;">KEYSTONE</div>
-            <div style="font-family:'Raleway',sans-serif; font-weight:300; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#d4a54a; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Raleway',sans-serif; font-weight:300; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#c89838; opacity:0.8;">Task Automation</div>
         </div>
         <div class="font-cell bg-lt">
             <span class="bg-tag">Light</span>
@@ -481,7 +339,7 @@
                 <use href="#monument-lt"/>
             </svg>
             <div style="font-family:'Cinzel',serif; font-weight:600; letter-spacing:7px; font-size:1.4rem; margin-top:16px; color:#111;">KEYSTONE</div>
-            <div style="font-family:'Raleway',sans-serif; font-weight:300; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#8b6914; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Raleway',sans-serif; font-weight:300; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#7d5e16; opacity:0.8;">Task Automation</div>
         </div>
     </div>
     <div class="notes"><strong>Option A.</strong> Cinzel is directly inspired by classical Roman inscriptions — the most historically authentic pairing. Raleway Light provides a clean, airy counterpoint for the tagline. This combination leans most heavily into the architectural heritage of the logo.</div>
@@ -501,7 +359,7 @@
                 <use href="#monument-dk"/>
             </svg>
             <div style="font-family:'Cormorant Garamond',serif; font-weight:600; letter-spacing:8px; font-size:1.5rem; margin-top:16px; color:#fff;">KEYSTONE</div>
-            <div style="font-family:'Montserrat',sans-serif; font-weight:400; font-size:0.58rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#d4a54a; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Montserrat',sans-serif; font-weight:400; font-size:0.58rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#c89838; opacity:0.8;">Task Automation</div>
         </div>
         <div class="font-cell bg-lt">
             <span class="bg-tag">Light</span>
@@ -509,7 +367,7 @@
                 <use href="#monument-lt"/>
             </svg>
             <div style="font-family:'Cormorant Garamond',serif; font-weight:600; letter-spacing:8px; font-size:1.5rem; margin-top:16px; color:#111;">KEYSTONE</div>
-            <div style="font-family:'Montserrat',sans-serif; font-weight:400; font-size:0.58rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#8b6914; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Montserrat',sans-serif; font-weight:400; font-size:0.58rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#7d5e16; opacity:0.8;">Task Automation</div>
         </div>
     </div>
     <div class="notes"><strong>Option B.</strong> Cormorant Garamond has high-contrast thin/thick strokes that feel luxurious and refined. Montserrat grounds the tagline in something geometric and modern. This pairing says "premium but approachable" — elegant without being stuffy.</div>
@@ -529,7 +387,7 @@
                 <use href="#monument-dk"/>
             </svg>
             <div style="font-family:'Playfair Display',serif; font-weight:600; letter-spacing:6px; font-size:1.4rem; margin-top:16px; color:#fff;">KEYSTONE</div>
-            <div style="font-family:'Source Sans 3',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#d4a54a; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Source Sans 3',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#c89838; opacity:0.8;">Task Automation</div>
         </div>
         <div class="font-cell bg-lt">
             <span class="bg-tag">Light</span>
@@ -537,7 +395,7 @@
                 <use href="#monument-lt"/>
             </svg>
             <div style="font-family:'Playfair Display',serif; font-weight:600; letter-spacing:6px; font-size:1.4rem; margin-top:16px; color:#111;">KEYSTONE</div>
-            <div style="font-family:'Source Sans 3',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#8b6914; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Source Sans 3',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#7d5e16; opacity:0.8;">Task Automation</div>
         </div>
     </div>
     <div class="notes"><strong>Option C.</strong> Playfair Display has dramatic thick-thin contrast with a transitional feel — bold, editorial, confident. Source Sans 3 is Adobe's workhorse neutral sans that never competes for attention. Professional and polished without being flashy.</div>
@@ -557,7 +415,7 @@
                 <use href="#monument-dk"/>
             </svg>
             <div style="font-family:'Libre Baskerville',serif; font-weight:700; letter-spacing:5px; font-size:1.3rem; margin-top:16px; color:#fff;">KEYSTONE</div>
-            <div style="font-family:'Work Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#d4a54a; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Work Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#c89838; opacity:0.8;">Task Automation</div>
         </div>
         <div class="font-cell bg-lt">
             <span class="bg-tag">Light</span>
@@ -565,7 +423,7 @@
                 <use href="#monument-lt"/>
             </svg>
             <div style="font-family:'Libre Baskerville',serif; font-weight:700; letter-spacing:5px; font-size:1.3rem; margin-top:16px; color:#111;">KEYSTONE</div>
-            <div style="font-family:'Work Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#8b6914; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'Work Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#7d5e16; opacity:0.8;">Task Automation</div>
         </div>
     </div>
     <div class="notes"><strong>Option D.</strong> Libre Baskerville is a sturdy, traditional serif that reads well at any size — the kind of font you'd see on a law firm or financial institution. Work Sans is friendly and geometric. This pairing is the most "established business" feel — trustworthy, solid, no-nonsense.</div>
@@ -585,7 +443,7 @@
                 <use href="#monument-dk"/>
             </svg>
             <div style="font-family:'DM Serif Display',serif; font-weight:400; letter-spacing:5px; font-size:1.45rem; margin-top:16px; color:#fff;">KEYSTONE</div>
-            <div style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#d4a54a; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#c89838; opacity:0.8;">Task Automation</div>
         </div>
         <div class="font-cell bg-lt">
             <span class="bg-tag">Light</span>
@@ -593,37 +451,13 @@
                 <use href="#monument-lt"/>
             </svg>
             <div style="font-family:'DM Serif Display',serif; font-weight:400; letter-spacing:5px; font-size:1.45rem; margin-top:16px; color:#111;">KEYSTONE</div>
-            <div style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#8b6914; opacity:0.8;">Task Automation</div>
+            <div style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:0.6rem; letter-spacing:4px; text-transform:uppercase; margin-top:4px; color:#7d5e16; opacity:0.8;">Task Automation</div>
         </div>
     </div>
     <div class="notes"><strong>Option E.</strong> DM Serif Display and DM Sans are designed as a matched pair — they share the same DNA in different expressions. The serif has beautiful ball terminals and a warm, modern personality. This is the most cohesive pairing because the fonts were literally made to go together. Contemporary but not cold.</div>
 </div>
 
 </div><!-- /font-cards -->
-
-<!-- Summary table -->
-<table class="summary">
-    <tr>
-        <td style="color:#3b82f6">01 &mdash; Monument</td>
-        <td>Arch-dominant masonry. Visible stone blocks, towering arch, short pillars. Classical authority.</td>
-    </tr>
-    <tr>
-        <td style="color:#0ea5e9">02 &mdash; Modern Arch</td>
-        <td>One continuous thick shape, smooth curves, no separate pillars. Clean and contemporary.</td>
-    </tr>
-    <tr>
-        <td style="color:#06b6d4">03 &mdash; Gateway</td>
-        <td>Widest and most open. Grand entrance feel. Largest keystone. "Freedom doorway" energy.</td>
-    </tr>
-    <tr>
-        <td style="color:#fbbf24">04 &mdash; Crowned Arch</td>
-        <td>Just the top half. Most compact. Best for favicons, badges, social avatars. Diamond sparkle.</td>
-    </tr>
-    <tr>
-        <td style="color:#f59e0b">05 &mdash; Dimensional</td>
-        <td>3D perspective with shadow/depth. Most premium. Feels like a real stone object.</td>
-    </tr>
-</table>
 
 <p class="foot">
     All options use the same refined Monument logo &mdash; off-white stone with golden keystone crown<br>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keystone Logo Concepts v2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #08090c;
+            color: #e5e5e5;
+            padding: 60px 20px;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #282828;
+            margin-bottom: 80px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* Current logo reference */
+        .current-ref {
+            max-width: 500px;
+            margin: 0 auto 80px;
+            background: #0f1318;
+            border: 1px solid #1a1d24;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            opacity: 0.5;
+        }
+        .current-ref img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .current-ref p {
+            margin-top: 12px;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .concept-card {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            background: #0c0d10;
+            border: 1px solid #181a20;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .concept-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 32px;
+            border-bottom: 1px solid #141519;
+        }
+        .concept-label .name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #555;
+        }
+        .concept-label .num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1b20;
+        }
+
+        /* Main display area */
+        .display {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            min-height: 320px;
+            justify-content: center;
+        }
+        .display .wordmark {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 10px;
+        }
+        .display .tag {
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        /* Horizontal lockup */
+        .lockup-bar {
+            padding: 24px 40px;
+            background: #0a0b0e;
+            border-top: 1px solid #141519;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .lockup-bar .lk-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+        }
+        .lockup-bar .lk-tag {
+            font-size: 0.55rem;
+            letter-spacing: 3px;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        /* Description */
+        .desc {
+            padding: 24px 32px;
+            border-top: 1px solid #141519;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #666;
+        }
+        .desc strong { color: #999; }
+
+        /* Small variants row */
+        .variants-row {
+            padding: 20px 32px;
+            border-top: 1px solid #111215;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .var-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .var-label {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        .light-box {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .divider {
+            text-align: center;
+            color: #1a1b20;
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 20px 0 60px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Keystone</h1>
+<p class="subtitle">Logo Exploration Round 2 — 5 New Concepts</p>
+
+<!-- ================================ -->
+<!-- CONCEPT 1: THE VELOCITY K -->
+<!-- ================================ -->
+<div class="concept-card">
+    <div class="concept-label">
+        <span class="name">Velocity</span>
+        <span class="num">01</span>
+    </div>
+    <div class="display">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+            <defs>
+                <linearGradient id="v-main" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563eb"/>
+                    <stop offset="60%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#60a5fa"/>
+                </linearGradient>
+                <linearGradient id="v-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f59e0b"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                </linearGradient>
+                <filter id="v-glow1">
+                    <feGaussianBlur stdDeviation="6" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="v-glow2">
+                    <feGaussianBlur stdDeviation="3" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+            </defs>
+
+            <!-- Speed streaks behind -->
+            <line x1="8" y1="52" x2="28" y2="52" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+            <line x1="2" y1="68" x2="30" y2="68" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" opacity="0.15"/>
+            <line x1="12" y1="84" x2="32" y2="84" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+
+            <!-- Main K — thick, confident, angled forward -->
+            <!-- Vertical stem slightly angled for dynamism -->
+            <path d="M42 18 L38 122" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+            <!-- Upper diagonal — arrow-like -->
+            <path d="M44 70 L92 20" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+            <!-- Lower diagonal -->
+            <path d="M44 70 L88 118" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+
+            <!-- Gold keystone accent at the apex -->
+            <path d="M88 6 L102 6 L98 24 L84 24 Z" fill="url(#v-gold)" filter="url(#v-glow2)"/>
+
+            <!-- Arrow tip extending from upper K arm -->
+            <path d="M92 20 L108 12 L100 30 Z" fill="url(#v-gold)" opacity="0.8" filter="url(#v-glow2)"/>
+
+            <!-- Impact burst at the junction -->
+            <circle cx="44" cy="70" r="5" fill="#3b82f6" opacity="0.15" filter="url(#v-glow1)"/>
+
+            <!-- Subtle keystone shape outline ghost behind everything -->
+            <path d="M28 8 Q26 2 32 2 L108 2 Q114 2 112 8 L100 130 Q98 136 92 136 L40 136 Q34 136 32 130 Z"
+                  fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.06"/>
+        </svg>
+
+        <span class="wordmark" style="background: linear-gradient(135deg, #2563eb, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</span>
+        <span class="tag" style="color: #f59e0b;">Task Automation</span>
+    </div>
+
+    <div class="lockup-bar">
+        <svg width="32" height="32" viewBox="0 0 140 140">
+            <path d="M42 18 L38 122" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+            <path d="M44 70 L92 20" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+            <path d="M44 70 L88 118" stroke="url(#v-main)" stroke-width="14" stroke-linecap="round"/>
+            <path d="M92 20 L108 12 L100 30 Z" fill="url(#v-gold)" opacity="0.8"/>
+        </svg>
+        <div>
+            <div class="lk-text" style="background: linear-gradient(135deg, #2563eb, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</div>
+            <div class="lk-tag" style="color:#b58c2b;">Task Automation</div>
+        </div>
+    </div>
+
+    <div class="desc">
+        <strong>Speed meets substance.</strong> A bold K leaning forward with motion streaks — suggests things getting done fast. The gold arrow tip at the top-right is the keystone accent, pointing forward and upward. A ghost keystone outline sits behind everything. The junction point glows — that's where automation kicks in. This one screams <strong>"we move fast."</strong>
+    </div>
+</div>
+
+
+<!-- ================================ -->
+<!-- CONCEPT 2: THE PORTAL -->
+<!-- ================================ -->
+<div class="concept-card">
+    <div class="concept-label">
+        <span class="name">Portal</span>
+        <span class="num">02</span>
+    </div>
+    <div class="display">
+        <svg width="130" height="150" viewBox="0 0 130 150">
+            <defs>
+                <linearGradient id="p-arch" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="50%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#60a5fa"/>
+                </linearGradient>
+                <linearGradient id="p-light" x1="50%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
+                    <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.08"/>
+                    <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.25"/>
+                </linearGradient>
+                <linearGradient id="p-keystoneG" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#d97706"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                </linearGradient>
+                <radialGradient id="p-glow" cx="50%" cy="20%" r="50%">
+                    <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="p-bloom">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <clipPath id="p-archClip">
+                    <path d="M10 145 L10 60 Q10 10 65 10 Q120 10 120 60 L120 145 Z"/>
+                </clipPath>
+            </defs>
+
+            <!-- Light pouring through the arch -->
+            <g clip-path="url(#p-archClip)">
+                <rect x="10" y="10" width="110" height="135" fill="url(#p-light)"/>
+                <ellipse cx="65" cy="10" rx="40" ry="25" fill="url(#p-glow)"/>
+            </g>
+
+            <!-- Main arch — thick outer -->
+            <path d="M10 145 L10 60 Q10 10 65 10 Q120 10 120 60 L120 145"
+                  fill="none" stroke="url(#p-arch)" stroke-width="8" stroke-linecap="round"/>
+
+            <!-- Inner arch echo -->
+            <path d="M28 145 L28 65 Q28 28 65 28 Q102 28 102 65 L102 145"
+                  fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.15"/>
+
+            <!-- THE KEYSTONE — prominent wedge at the crown -->
+            <path d="M46 14 L65 0 L84 14 L80 28 L50 28 Z"
+                  fill="url(#p-keystoneG)" filter="url(#p-bloom)"/>
+            <!-- Keystone inner bevel -->
+            <path d="M53 16 L65 6 L77 16 L74 24 L56 24 Z"
+                  fill="none" stroke="white" stroke-opacity="0.35" stroke-width="0.75"/>
+
+            <!-- Radiance lines from keystone -->
+            <line x1="65" y1="-4" x2="65" y2="-12" stroke="#fbbf24" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+            <line x1="50" y1="4" x2="44" y2="-2" stroke="#fbbf24" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+            <line x1="80" y1="4" x2="86" y2="-2" stroke="#fbbf24" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+            <line x1="42" y1="14" x2="34" y2="12" stroke="#fbbf24" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+            <line x1="88" y1="14" x2="96" y2="12" stroke="#fbbf24" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+
+            <!-- Ground line -->
+            <line x1="4" y1="145" x2="126" y2="145" stroke="#3b82f6" stroke-width="2" opacity="0.15"/>
+
+            <!-- Subtle figure / person silhouette walking through (tiny, symbolic) -->
+            <g opacity="0.12" transform="translate(58, 100)">
+                <circle cx="7" cy="0" r="4" fill="white"/>
+                <line x1="7" y1="4" x2="7" y2="25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="7" y1="12" x2="0" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="12" x2="14" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="25" x2="1" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="25" x2="13" y2="38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </g>
+        </svg>
+
+        <span class="wordmark" style="background: linear-gradient(135deg, #3b82f6, #60a5fa, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</span>
+        <span class="tag" style="color: #d97706;">Task Automation</span>
+    </div>
+
+    <div class="lockup-bar">
+        <svg width="28" height="34" viewBox="0 0 130 150">
+            <path d="M10 145 L10 60 Q10 10 65 10 Q120 10 120 60 L120 145" fill="none" stroke="url(#p-arch)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M46 14 L65 0 L84 14 L80 28 L50 28 Z" fill="url(#p-keystoneG)"/>
+            <line x1="65" y1="-4" x2="65" y2="-12" stroke="#fbbf24" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        </svg>
+        <div>
+            <div class="lk-text" style="background: linear-gradient(135deg, #3b82f6, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</div>
+            <div class="lk-tag" style="color:#b58c2b;">Task Automation</div>
+        </div>
+    </div>
+
+    <div class="desc">
+        <strong>Walk through to freedom.</strong> A grand archway with a golden keystone crown, warm light pouring through from the other side. A tiny figure walks through — symbolic of the business owner stepping out of admin and into their life. The keystone radiates light. This one hits the <strong>"get your life back"</strong> messaging hardest. Premium, aspirational, emotional.
+    </div>
+</div>
+
+
+<!-- ================================ -->
+<!-- CONCEPT 3: THE FACET -->
+<!-- ================================ -->
+<div class="concept-card">
+    <div class="concept-label">
+        <span class="name">Facet</span>
+        <span class="num">03</span>
+    </div>
+    <div class="display">
+        <svg width="120" height="140" viewBox="0 0 120 140">
+            <defs>
+                <linearGradient id="f3-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+                <linearGradient id="f3-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#1d4ed8"/>
+                </linearGradient>
+                <linearGradient id="f3-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#60a5fa"/>
+                    <stop offset="100%" stop-color="#3b82f6"/>
+                </linearGradient>
+                <linearGradient id="f3-4" x1="50%" y1="0%" x2="50%" y2="100%">
+                    <stop offset="0%" stop-color="#93c5fd"/>
+                    <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+                <linearGradient id="f3-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fbbf24"/>
+                    <stop offset="100%" stop-color="#d97706"/>
+                </linearGradient>
+                <filter id="f3-glow">
+                    <feGaussianBlur stdDeviation="3" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+            </defs>
+
+            <!-- Faceted keystone — gem-like, multiple flat faces -->
+            <!-- Left face dark -->
+            <path d="M18 10 L60 2 L60 70 L22 55 Z" fill="url(#f3-1)"/>
+            <!-- Right face medium -->
+            <path d="M60 2 L102 10 L98 55 L60 70 Z" fill="url(#f3-2)"/>
+            <!-- Bottom left face -->
+            <path d="M22 55 L60 70 L55 132 L30 128 Z" fill="url(#f3-3)"/>
+            <!-- Bottom right face lighter -->
+            <path d="M60 70 L98 55 L90 128 L65 132 Z" fill="url(#f3-4)"/>
+            <!-- Center bottom triangle -->
+            <path d="M55 132 L60 138 L65 132 L60 70 Z" fill="#1e3a5f"/>
+
+            <!-- Edge highlights -->
+            <path d="M60 2 L60 70" stroke="white" stroke-width="0.75" opacity="0.3"/>
+            <path d="M22 55 L98 55" stroke="white" stroke-width="0.5" opacity="0.15"/>
+            <path d="M60 70 L55 132" stroke="white" stroke-width="0.5" opacity="0.1"/>
+            <path d="M60 70 L65 132" stroke="white" stroke-width="0.5" opacity="0.1"/>
+
+            <!-- Outer edges -->
+            <path d="M18 10 L60 2 L102 10 L98 55 L90 128 L65 132 L60 138 L55 132 L30 128 L22 55 Z"
+                  fill="none" stroke="white" stroke-width="0.5" opacity="0.15"/>
+
+            <!-- Gold accent stripe across the crown -->
+            <path d="M18 10 L60 2 L102 10 L98 18 L60 12 L22 18 Z" fill="url(#f3-gold)" opacity="0.7"/>
+
+            <!-- Top sparkle -->
+            <circle cx="60" cy="2" r="3" fill="#fbbf24" filter="url(#f3-glow)" opacity="0.8"/>
+
+            <!-- K etched into the gem — subtle, elegant -->
+            <path d="M40 35 L40 105" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <path d="M40 70 L72 38" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <path d="M40 70 L68 102" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+
+            <!-- Reflection glint -->
+            <path d="M30 20 L45 15 L42 30 Z" fill="white" opacity="0.07"/>
+        </svg>
+
+        <span class="wordmark" style="background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</span>
+        <span class="tag" style="color: #fbbf24;">Task Automation</span>
+    </div>
+
+    <div class="lockup-bar">
+        <svg width="28" height="34" viewBox="0 0 120 140">
+            <path d="M18 10 L60 2 L102 10 L98 55 L90 128 L65 132 L60 138 L55 132 L30 128 L22 55 Z" fill="url(#f3-2)"/>
+            <path d="M18 10 L60 2 L102 10 L98 18 L60 12 L22 18 Z" fill="url(#f3-gold)" opacity="0.7"/>
+            <path d="M40 35 L40 105" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <path d="M40 70 L72 38" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <path d="M40 70 L68 102" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+        <div>
+            <div class="lk-text" style="background: linear-gradient(135deg, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</div>
+            <div class="lk-tag" style="color:#b58c2b;">Task Automation</div>
+        </div>
+    </div>
+
+    <div class="desc">
+        <strong>Cut like a gem.</strong> The keystone rendered as a faceted precious stone — multiple flat faces catching light differently. Gold crown stripe at the top. The K is etched into the surface. This feels <strong>premium, valuable, worth investing in</strong>. The facets give it incredible depth compared to the flat current logo. Works beautifully on dark backgrounds.
+    </div>
+</div>
+
+
+<!-- ================================ -->
+<!-- CONCEPT 4: THE BRIDGE -->
+<!-- ================================ -->
+<div class="concept-card">
+    <div class="concept-label">
+        <span class="name">Bridge</span>
+        <span class="num">04</span>
+    </div>
+    <div class="display">
+        <svg width="180" height="120" viewBox="0 0 180 120">
+            <defs>
+                <linearGradient id="br-main" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="50%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#1e40af"/>
+                </linearGradient>
+                <linearGradient id="br-gold" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#d97706"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                </linearGradient>
+                <filter id="br-glow">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+            </defs>
+
+            <!-- Bridge arch -->
+            <path d="M8 105 Q8 30 90 30 Q172 30 172 105"
+                  fill="none" stroke="url(#br-main)" stroke-width="6" stroke-linecap="round"/>
+
+            <!-- Bridge pillars -->
+            <line x1="8" y1="105" x2="8" y2="115" stroke="#1e40af" stroke-width="6" stroke-linecap="round"/>
+            <line x1="172" y1="105" x2="172" y2="115" stroke="#1e40af" stroke-width="6" stroke-linecap="round"/>
+
+            <!-- Road/deck across the top -->
+            <line x1="0" y1="30" x2="180" y2="30" stroke="#3b82f6" stroke-width="3" opacity="0.2"/>
+
+            <!-- Vertical supports -->
+            <line x1="45" y1="30" x2="28" y2="78" stroke="#3b82f6" stroke-width="2" opacity="0.15"/>
+            <line x1="90" y1="30" x2="90" y2="30" stroke="#3b82f6" stroke-width="2" opacity="0.15"/>
+            <line x1="135" y1="30" x2="152" y2="78" stroke="#3b82f6" stroke-width="2" opacity="0.15"/>
+
+            <!-- THE KEYSTONE — the center piece that holds the bridge -->
+            <path d="M76 22 L90 10 L104 22 L100 38 L80 38 Z"
+                  fill="url(#br-gold)" filter="url(#br-glow)"/>
+            <!-- Inner detail -->
+            <path d="M82 24 L90 16 L98 24 L96 34 L84 34 Z"
+                  fill="none" stroke="white" stroke-opacity="0.3" stroke-width="0.75"/>
+
+            <!-- K integrated into the bridge structure -->
+            <path d="M72 50 L72 100" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M72 75 L100 52" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M72 75 L97 98" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+
+            <!-- Glow under keystone -->
+            <ellipse cx="90" cy="38" rx="20" ry="8" fill="#fbbf24" opacity="0.06"/>
+
+            <!-- Sparkles -->
+            <circle cx="90" cy="10" r="2" fill="#fbbf24" opacity="0.7"/>
+        </svg>
+
+        <span class="wordmark" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</span>
+        <span class="tag" style="color: #d97706;">Task Automation</span>
+    </div>
+
+    <div class="lockup-bar">
+        <svg width="44" height="28" viewBox="0 0 180 120">
+            <path d="M8 105 Q8 30 90 30 Q172 30 172 105" fill="none" stroke="url(#br-main)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M76 22 L90 10 L104 22 L100 38 L80 38 Z" fill="url(#br-gold)"/>
+            <path d="M72 50 L72 100" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M72 75 L100 52" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M72 75 L97 98" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+        </svg>
+        <div>
+            <div class="lk-text" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</div>
+            <div class="lk-tag" style="color:#b58c2b;">Task Automation</div>
+        </div>
+    </div>
+
+    <div class="desc">
+        <strong>The piece that holds everything together.</strong> A literal bridge with the keystone sitting at the crown — the architectural truth of what a keystone actually is. The K hangs beneath like a structural element. This one tells the story most literally: <strong>you're the keystone that holds your clients' businesses together</strong>. Wide format works great for headers and website navs.
+    </div>
+</div>
+
+
+<!-- ================================ -->
+<!-- CONCEPT 5: THE MONOGRAM -->
+<!-- ================================ -->
+<div class="concept-card">
+    <div class="concept-label">
+        <span class="name">Monogram</span>
+        <span class="num">05</span>
+    </div>
+    <div class="display">
+        <svg width="130" height="130" viewBox="0 0 130 130">
+            <defs>
+                <linearGradient id="m-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="30%" stop-color="#3b82f6"/>
+                    <stop offset="70%" stop-color="#f59e0b"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                </linearGradient>
+                <linearGradient id="m-k" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#e5e7eb"/>
+                    <stop offset="100%" stop-color="#9ca3af"/>
+                </linearGradient>
+                <filter id="m-glow">
+                    <feGaussianBlur stdDeviation="3" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="m-shadow">
+                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+                </filter>
+            </defs>
+
+            <!-- Outer circle — gradient ring -->
+            <circle cx="65" cy="65" r="58" fill="none" stroke="url(#m-ring)" stroke-width="5"/>
+
+            <!-- Inner circle — subtle -->
+            <circle cx="65" cy="65" r="48" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+
+            <!-- Keystone shape nestled at top of circle -->
+            <path d="M52 10 L65 0 L78 10 L75 22 L55 22 Z"
+                  fill="#f59e0b" filter="url(#m-glow)" opacity="0.9"/>
+
+            <!-- Background disc -->
+            <circle cx="65" cy="65" r="45" fill="#0c0d10"/>
+
+            <!-- Bold K — centered, clean -->
+            <path d="M44 30 L44 100" stroke="url(#m-k)" stroke-width="7" stroke-linecap="round" filter="url(#m-shadow)"/>
+            <path d="M44 65 L84 32" stroke="url(#m-k)" stroke-width="7" stroke-linecap="round" filter="url(#m-shadow)"/>
+            <path d="M44 65 L80 98" stroke="url(#m-k)" stroke-width="7" stroke-linecap="round" filter="url(#m-shadow)"/>
+
+            <!-- Gold dot accent where K arms meet -->
+            <circle cx="44" cy="65" r="4" fill="#f59e0b" filter="url(#m-glow)"/>
+
+            <!-- Subtle rotation tick marks around ring -->
+            <g opacity="0.1" stroke="white" stroke-width="1">
+                <line x1="65" y1="3" x2="65" y2="8"/>
+                <line x1="65" y1="122" x2="65" y2="127"/>
+                <line x1="3" y1="65" x2="8" y2="65"/>
+                <line x1="122" y1="65" x2="127" y2="65"/>
+            </g>
+        </svg>
+
+        <span class="wordmark" style="background: linear-gradient(135deg, #e5e7eb, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</span>
+        <span class="tag" style="color: #f59e0b;">Task Automation</span>
+    </div>
+
+    <div class="lockup-bar">
+        <svg width="32" height="32" viewBox="0 0 130 130">
+            <circle cx="65" cy="65" r="58" fill="none" stroke="url(#m-ring)" stroke-width="5"/>
+            <circle cx="65" cy="65" r="45" fill="#0a0b0e"/>
+            <path d="M52 10 L65 0 L78 10 L75 22 L55 22 Z" fill="#f59e0b" opacity="0.9"/>
+            <path d="M44 30 L44 100" stroke="#d1d5db" stroke-width="7" stroke-linecap="round"/>
+            <path d="M44 65 L84 32" stroke="#d1d5db" stroke-width="7" stroke-linecap="round"/>
+            <path d="M44 65 L80 98" stroke="#d1d5db" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="44" cy="65" r="4" fill="#f59e0b"/>
+        </svg>
+        <div>
+            <div class="lk-text" style="background: linear-gradient(135deg, #e5e7eb, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KEYSTONE</div>
+            <div class="lk-tag" style="color:#b58c2b;">Task Automation</div>
+        </div>
+    </div>
+
+    <div class="desc">
+        <strong>Clean, premium, versatile.</strong> A silver K inside a blue-to-gold gradient ring, with a golden keystone crown at the 12 o'clock position. This is the most <strong>app-icon / favicon / profile-picture ready</strong> concept. Works perfectly as a circular avatar on WhatsApp, LinkedIn, social media. The ring gradient flows from blue (work) to gold (freedom). Tick marks suggest precision. Feels like a luxury watch brand.
+    </div>
+</div>
+
+
+<div style="text-align:center; margin-top:40px; padding:60px; border-top: 1px solid #111;">
+    <p style="color:#333; font-size:0.8rem; letter-spacing:2px; line-height:2;">
+        Pick your favourite and I'll refine it into production SVGs.<br>
+        Or mix elements — "I like the gem from 03 but the K style from 01" works too.
+    </p>
+</div>
+
+</body>
+</html>

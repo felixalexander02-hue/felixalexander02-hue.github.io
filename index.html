@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keystone — Custom Software, Built for You</title>
     <meta name="description" content="Custom software built specifically for your business. Not a generic tool trying to solve problems you don't have. Tailored to you, adjustable anytime.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -120,25 +122,50 @@
         }
     </style>
 
-    <!-- Inline SVG definitions for the keystone logo -->
+    <!-- Inline SVG definitions for the Keystone arch logo -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <defs>
-            <!-- Keystone logo: architectural wedge stone from top of an arch -->
-            <symbol id="keystone-logo" viewBox="0 0 64 80">
-                <!-- Outer keystone shape — wider at top, tapers down -->
-                <path d="M6 4 L58 4 L50 76 L14 76 Z" fill="currentColor"/>
-                <!-- Inner bevel for 3D depth -->
-                <path d="M12 12 L52 12 L45.5 68 L18.5 68 Z" fill="none" stroke="white" stroke-opacity="0.15" stroke-width="1.5"/>
-                <!-- Horizontal stone line — top third -->
-                <line x1="11" y1="28" x2="53" y2="28" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
-                <!-- Horizontal stone line — lower third -->
-                <line x1="16" y1="52" x2="48" y2="52" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+            <linearGradient id="ks-gold" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f7db55"/>
+                <stop offset="100%" stop-color="#e3b636"/>
+            </linearGradient>
+
+            <!-- Keystone arch logo: navy voussoir stones, gold outline, pure-gold crown keystone -->
+            <symbol id="keystone-logo" viewBox="0 0 200 200">
+                <path d="M32 178 L32 100 A68 68 0 0 1 168 100 L168 178 L148 178 L148 100 A48 48 0 0 0 52 100 L52 178 Z"
+                      fill="#313f5c" stroke="#f5d442" stroke-width="3" stroke-linejoin="round"/>
+                <g stroke="#26324a" stroke-width="2.4" stroke-linecap="round" fill="none">
+                    <path d="M141.57 76 L158.89 66"/>
+                    <path d="M127.53 60.68 L139.00 44.29"/>
+                    <path d="M112.42 53.64 L117.60 34.32"/>
+                    <path d="M87.58 53.64 L82.40 34.32"/>
+                    <path d="M72.47 60.68 L61.00 44.29"/>
+                    <path d="M58.43 76 L41.11 66"/>
+                    <path d="M32 100 L52 100 M148 100 L168 100"/>
+                    <path d="M32 126 L52 126 M148 126 L168 126"/>
+                    <path d="M32 152 L52 152 M148 152 L168 152"/>
+                </g>
+                <path d="M82.79 35.77 A66.5 66.5 0 0 1 117.21 35.77 L112.81 52.19 A49.5 49.5 0 0 0 87.19 52.19 Z"
+                      fill="url(#ks-gold)"/>
             </symbol>
 
-            <!-- Minimal keystone for nav/small contexts -->
-            <symbol id="keystone-mark" viewBox="0 0 64 80">
-                <path d="M6 4 L58 4 L50 76 L14 76 Z" fill="currentColor"/>
-                <path d="M14 14 L50 14 L44 66 L20 66 Z" fill="none" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+            <!-- Same arch mark for nav/footer/small contexts -->
+            <symbol id="keystone-mark" viewBox="0 0 200 200">
+                <path d="M32 178 L32 100 A68 68 0 0 1 168 100 L168 178 L148 178 L148 100 A48 48 0 0 0 52 100 L52 178 Z"
+                      fill="#313f5c" stroke="#f5d442" stroke-width="3" stroke-linejoin="round"/>
+                <g stroke="#26324a" stroke-width="2.4" stroke-linecap="round" fill="none">
+                    <path d="M141.57 76 L158.89 66"/>
+                    <path d="M127.53 60.68 L139.00 44.29"/>
+                    <path d="M112.42 53.64 L117.60 34.32"/>
+                    <path d="M87.58 53.64 L82.40 34.32"/>
+                    <path d="M72.47 60.68 L61.00 44.29"/>
+                    <path d="M58.43 76 L41.11 66"/>
+                    <path d="M32 100 L52 100 M148 100 L168 100"/>
+                    <path d="M32 126 L52 126 M148 126 L168 126"/>
+                    <path d="M32 152 L52 152 M148 152 L168 152"/>
+                </g>
+                <path d="M82.79 35.77 A66.5 66.5 0 0 1 117.21 35.77 L112.81 52.19 A49.5 49.5 0 0 0 87.19 52.19 Z"
+                      fill="url(#ks-gold)"/>
             </symbol>
         </defs>
     </svg>
